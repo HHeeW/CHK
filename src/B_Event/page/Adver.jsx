@@ -7,16 +7,16 @@ render() {
   setInterval(slide,5000);
 
   function slide(){
-    $(function(){
+  
     $('.b_sideImg').animate({
       'top' : '-300px'
-    },1000,function(){
+    },4000,function(){
       $('.b_sideImg img:eq(0)').clone().appendTo('.b_sideImg');
       $('.b_sideImg img:eq(0)').remove();
       $('.b_sideImg').css('top',0);
     })
-  })
-}
+  }
+
 
    const imgList = [
     {id : 1, url : "b_images/sideimg1.jpg"},
@@ -44,3 +44,4 @@ render() {
     )
   }
 }
+
