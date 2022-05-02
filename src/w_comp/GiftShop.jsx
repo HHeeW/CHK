@@ -6,12 +6,6 @@ import FixBar from './FixBar';
 import TopBar from './TopBar';
 
 const GiftShop = () => {
-// const a= document.getElementsByClassName('w_heartNum').innerText.value = +1;
-// console.log(a);
-//  $('button.w_heart').on("click",()=>{
-//     alert(a);
-   
-//   })
         var settings = {
           dots: true,
           infinite: true,
@@ -40,12 +34,12 @@ const GiftShop = () => {
               <img src="w_images/doctor/marvel_airpot.jpg" alt='marvel_airpot'></img>
               <p>마블 에어팟 케이스</p>
               <h4>32,000 원</h4>
-              <h6>평점 4.1 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i><span className='w_heartNum'>561</span> </h6>
+              <h6>평점 4.1 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 524</h6>
             
               <div className="w_list-click">
                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                 <button><i class="fa-solid fa-gift"></i></button>
-                <button className='w_heart'><i class="fa-solid fa-heart"></i></button>
+                <button><i class="fa-solid fa-heart"></i></button>
               </div>
               
             </div>

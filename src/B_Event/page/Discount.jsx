@@ -45,10 +45,6 @@ function List(props){
   
         <List img={imgL}/>
         
-     
-   
-       
-     
    
     </>
   )
