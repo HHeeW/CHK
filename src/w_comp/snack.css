@@ -37,7 +37,6 @@
     font-size: 18px;
     border: none;
     background-color:transparent;
-    font-family: 'HOENG';
 }
 .w_snack-bar>li>button:hover{
     cursor: pointer;
