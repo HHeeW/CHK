@@ -2330,6 +2330,8 @@
     "require-from-string" "^2.0.2"
     "uri-js" "^4.2.2"
 
+<<<<<<< HEAD
+=======
 "anime@^0.1.2":
   "integrity" "sha1-ak1vD2XqR8z36p7XDx2vEDKe/Ic="
   "resolved" "https://registry.npmjs.org/anime/-/anime-0.1.2.tgz"
@@ -2340,6 +2342,7 @@
     "request" "^2.34.0"
     "xml2js" "^0.4.1"
 
+>>>>>>> 233d64dd66127a493917185379bedc96b2e8e24e
 "animejs@^3.2.1":
   "integrity" "sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A=="
   "resolved" "https://registry.npmjs.org/animejs/-/animejs-3.2.1.tgz"

@@ -7,7 +7,10 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
+=======
     "anime": "^0.1.2",
+>>>>>>> 233d64dd66127a493917185379bedc96b2e8e24e
     "animejs": "^3.2.1",
     "jquery": "^3.6.0",
     "react": "^18.0.0",

@@ -10,8 +10,6 @@ export default class TopBar extends Component {
       <div className="w_container ">
         <img src="w_images/logo.png"></img>
         <ul className="w_play">
-          <li><i class="fa-solid fa-unlock"></i> login</li>
-          <i class="fa-solid fa-minus"></i>
           <li><i class="fa-solid fa-user-large"></i> MyPage</li>
           <i class="fa-solid fa-minus"></i>
           <li><i class="fa-solid fa-video"></i> Buy</li>

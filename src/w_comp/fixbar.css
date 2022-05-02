@@ -47,3 +47,7 @@
     font-size: 18px;
     display: scroll;
 }
+
+.slick-dots li button:before{
+    color:#00c8c8 !important ;
+}
