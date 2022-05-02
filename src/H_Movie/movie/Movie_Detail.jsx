@@ -24,7 +24,7 @@ const detail = (props) => {
           <p>개봉일 {props.open}</p>
           </div>
           <div className="H_ticketing_box">
-          <button className="H_ticketing">예매</button>
+          <Link to={'/ticket'}><button className="H_ticketing">예매</button></Link>
           </div>
         </div>
     </li>

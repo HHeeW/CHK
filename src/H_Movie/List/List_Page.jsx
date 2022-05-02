@@ -6,12 +6,10 @@ const List_Detail = () => {
         5월, 광기의 멀티버스가 깨어난다!`,
         detail:`끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며
         오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 ‘닥터 스트레인지’.
-        대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….`,
-        slider1:"d-1", slider2:"d-2", slider3:"d-3", slider4:"d-4", slider5:"d-5"},
-        
+        대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….`, 
+        slider1:"d1", slider2:"d2", slider3:"d3", slider4:"d4", slider5:"d5", slider6:"d6"},
       
        {poster:"H_images/39614_1000.jpg" , title:"해리포터와 죽음의 성물 2", entitle: "Harry Potter And The Deathly Hallows: Part2",  dir:"데이빗 예이츠", act:"다니엘 래드클리프 ,  엠마 왓슨 ,  루퍼트 그린트", gen:"환타지, 어드벤처", bas:" 131분, 미국, 영국", age:"H_all", ticketing:"9.0%", open:"2011.07. 14", link:"_31zwi0U8NE",
-       slider:"h-1", slider:"h-2", slider:"h-3", slider:"h-4", slider:"h-5", slider:"h-6",
        detail_title:`가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!`,
        detail: `1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서
         강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다.
@@ -23,7 +21,8 @@ const List_Detail = () => {
         그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다.
       
         한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는
-        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`}, 
+        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`,
+        slider1:"h1", slider2:"h2", slider3:"h3", slider4:"h4", slider5:"h5", slider6:"h6"}, 
       
        {poster:"H_images/85712_320.jpg" , title:"신비한 동물들과 덤블도어의 비밀", entitle:"Fantastic Beasts: The Secrets of Dumbledore", dir:"데이빗 예이츠", act:"에디 레드메인 ,  주드 로 ,  매즈 미켈슨 ,  댄 포글러 ,  앨리슨 수돌 ,  에즈라 밀러 ,  칼럼 터너 ,  제시카 윌리엄스 ,  빅토리아 예이츠 ,  윌리엄 나딜람 ,  리처드 코일", gen:"어드벤처, 가족, 환타지", bas:"142분, 미국", age:"H_12", ticketing:"8.5%", open:"2022.04.14", link:"DGhq0Kx8dzQ",
         detail_title:`가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!`,
@@ -37,7 +36,8 @@ const List_Detail = () => {
         그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다.
         
         한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는
-        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`},
+        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`,
+        slider1:"f1", slider2:"f2", slider3:"f3", slider4:"f4", slider5:"f5", slider6:"f6"},
        
        {poster:"H_images/85641_1000.jpg" , title:"해리 포터와 불사조 기사단", entitle:"Harry Potter And The Order Of The Phoenix", dir:"데이빗 예이츠", act:"다니엘 래드클리프 ,  엠마 왓슨 ,  루퍼트 그린트", gen:"환타지, 액션, 어드벤처", bas:"137분, 미국, 영국", age:"H_all", ticketing:"7.6%", open:"2007.7.12", link:"y6ZW7KXaXYk",
        detail_title: `호그와트 최대 위기! 볼드모트 그가 돌아왔다!
@@ -54,7 +54,8 @@ const List_Detail = () => {
        그 와중에 해리는 소중한 사람의 죽음까지 맞이하는 아픔을 겪게 되는데…
        
        위기에 빠진 호그와트!
-       해리포터와 불사조 기사단, 모든 것이 그들 손에 달렸다!!` },
+       해리포터와 불사조 기사단, 모든 것이 그들 손에 달렸다!!`,
+       slider1:"hp1", slider2:"hp2", slider3:"hp3", slider4:"hp4", slider5:"hp5", slider6:"hp6"},
        
        {poster:"H_images/76791_1000.jpg" , title:"신세계", entitle:"New World", dir:"박훈정", act:"이정재 ,  황정민 ,  최민식 ,  박성웅 ,  송지효", gen:"범죄, 액션", bas:"134분, 한국",  age:"H_19", ticketing:"7.1%", open:"2013.2.21", link: "rvLMVcRkRfY",
        detail_title:`너, 나하고 일 하나 같이 하자`,
@@ -66,7 +67,8 @@ const List_Detail = () => {
        
        약속 했잖습니까... 이번엔 진짜 끝이라고
        
-       한편, 작전의 성공만 생각하는 강과장(최민식)은 계속해서 자성(이정재)의 목을 조여만 간다. 시시각각 신분이 노출될 위기에 처한 자성(이정재)은 언제 자신을 배신할 지 모르는 경찰과, 형제의 의리로 대하는 정청(황정민) 사이에서 갈등하게 되는데…` },
+       한편, 작전의 성공만 생각하는 강과장(최민식)은 계속해서 자성(이정재)의 목을 조여만 간다. 시시각각 신분이 노출될 위기에 처한 자성(이정재)은 언제 자신을 배신할 지 모르는 경찰과, 형제의 의리로 대하는 정청(황정민) 사이에서 갈등하게 되는데…`,
+       slider1:"nw1", slider2:"nw2", slider3:"nw3", slider4:"nw4", slider5:"nw5", slider6:"nw6"},
        
        {poster:"H_images/80810_1000.jpg" , title:"신과함께 인과연", entitle:"Along with the Gods: The Last 49 Days", dir:"김용화", act:"하정우 ,  주지훈 ,  김향기 ,  마동석 ,  김동욱 ,  이정재", gen:"환타지, 드라마", bas:"141분, 한국",  age:"H_12", ticketing:"7.0%", open:"2018.08.01", link:"amXcMw8cJZk",
        detail_title:`환생이 약속된 마지막 49번째 재판을 앞둔 저승 삼차사`,
@@ -136,7 +138,7 @@ const List_Detail = () => {
        
        살아남기 위해 혈안이 된 나쁜 놈들 사이에서 서로 물지 않으면 물리는 지옥도가 펼쳐진다.` },
        
-       { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-and-Run Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
+       { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-andRun Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
        detail_title:`Hit and Run 상황 발생,
        순마 출동합니다!`,
        detail: `경찰 내 최고 엘리트 조직 내사과 소속 경위 ‘은시연’(공효진). 
