@@ -1,0 +1,7 @@
+.k-container-header{
+    display: flex;
+}
+.k-container-header-right{
+    display: flex;
+    justify-content: space-around;
+}
