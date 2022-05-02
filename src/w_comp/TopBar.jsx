@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './topbar.css';
-import {Outlet, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 export default class TopBar extends Component {
@@ -8,7 +8,7 @@ export default class TopBar extends Component {
     return (
       
       <div className="w_container ">
-        <img src="w_images/logo.png"></img>
+        <img src="w_images/logo.png" alt='logo'></img>
         <ul className="w_play">
           <li><i class="fa-solid fa-user-large"></i> MyPage</li>
           <i class="fa-solid fa-minus"></i>

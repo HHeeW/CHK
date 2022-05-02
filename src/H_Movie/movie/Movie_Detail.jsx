@@ -6,7 +6,7 @@ const detail = (props) => {
     <li className="H_movie">
       <Link to={`/Movie_Page_List${props.id}`}>
         <div className="H_poster_box">
-          <img className="H_poster" src={props.poster} alt="" />
+          <img className="H_poster" src={props.poster} alt={props.poster} />
           <div className="H_poster_text_box">
           <div className="H_poster_text">{props.detail}
           </div>

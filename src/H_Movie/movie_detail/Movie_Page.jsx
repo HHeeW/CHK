@@ -33,7 +33,7 @@ const Movie_Page = (props) => {
                 </div>
             </div>
             <div className="H_detail">
-                <img className='H_detail_poster' src={props.poster} alt="" />
+                <img className='H_detail_poster' src={props.poster} alt={props.poster} />
                 <div className="H_movie_detail_text_box">
                     <h1>{props.title}</h1>
                     <h4>{props.entitle}</h4>
