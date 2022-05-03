@@ -9,14 +9,16 @@
 .b_title{
     padding-bottom: 20px;
     padding-left: 5px;
-    border-bottom: 4px solid #333;
+    border-bottom: 6px double #0ec0bd;
 }
 .b_nav{
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 17px;
-    border-bottom: 1px solid #999;
+    align-items: center;
+    
+    /* border-bottom: 1px solid #999; */
    
 }
 
@@ -26,13 +28,7 @@
 .b_color{
    color: #00c9c7;
 }
-<<<<<<< HEAD
-.b_movie{
-   padding-left: 10px;
-}
-=======
 
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
 .b_myButton {
    box-shadow:inset 0px 39px 0px -24px #0ec0bd;
    background-color:#00c9c7;
