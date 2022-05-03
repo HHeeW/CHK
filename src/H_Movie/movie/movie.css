@@ -35,7 +35,7 @@
     margin-right: 10px !important;
 }
 .H_title{
-    border-bottom: 6px double #00c9c7;
+    border-bottom: 6px double #00c8c8;
     margin-bottom: 50px;
 }
 
@@ -89,8 +89,8 @@
     bottom: 10px;
     left: 10px;
     color: #fff;
-    text-shadow: 1px 1px 1px #00c9c7,
-                 1px -1px 1px #00c9c7;
+    text-shadow: 1px 1px 1px #00c8c8,
+                 1px -1px 1px #00c8c8;
 }
 .H_name{
     display: flex;
@@ -131,6 +131,11 @@
     color: #fff;
     border: none;
     border-radius: 10px;
-    background-color: #00c9c7;
-    box-shadow: 5px 5px 3px #00fffb5d;
+    background-color: #00c8c8;
+    box-shadow: 5px 5px 3px rgba(0, 200, 200, 0.4);
+}
+.H_ticketing:hover{
+    
+    background-color: #00aaaa;
+    box-shadow: 5px 5px 3px rgba(0, 200, 200, 0.6);
 }

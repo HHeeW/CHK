@@ -4,10 +4,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScrollToTop from './main/ScrollToTop';
 
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<Movie />} />
         <Route path='/Movie_Page_List1' element ={<Movie_Page_List />} />
@@ -31,6 +34,7 @@ function App() {
         <Route path='/Movie_Page_List19' element ={<Movie_Page_List />} />
         <Route path='/Movie_Page_List20' element ={<Movie_Page_List />} />
       </Routes>
+      </>
   )
 }
 
