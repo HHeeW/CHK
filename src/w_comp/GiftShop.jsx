@@ -17,7 +17,7 @@ const GiftShop = () => {
         };
   return (
     <>
-    <TopBar />
+    // <TopBar />
     <div className="w_s-n">
         <h2><i class="fa-solid fa-circle"></i> gift - shop </h2>
           <div className="w_movie-shop">
