@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
 import './footer.css';
+
+
 
 const Footer = () => {
 
@@ -26,7 +27,7 @@ const Footer = () => {
            <div className="w_text">
                 <p>회원약관 <i class="fa-solid fa-minus"></i> 개인정보처리방침 <i class="fa-solid fa-minus"></i> 회원안내 <i class="fa-solid fa-minus"></i> 채용안내 <i class="fa-solid fa-minus"></i> 광고/임대문의 <i class="fa-solid fa-minus"></i> 기업정보</p>
                 <p>경기도 김포시 김포한강로 CHK타워 10층 <i class="fa-solid fa-minus"></i> 고객센터 1544-1234</p>
-                <p>임원진 홍지우 <i class="fa-solid fa-minus"></i> 사업자등록번호 123-45-67890 <i class="fa-solid fa-minus"></i> 개인정보 보호 최고 책임자 홍지우</p>
+                <p>임원진 CHK(주) <i class="fa-solid fa-minus"></i> 사업자등록번호 123-45-67890 <i class="fa-solid fa-minus"></i> 개인정보 보호 최고 책임자 CHK(주)</p>
                 <p>copyright &#169; CHK cinema all right reserved.</p>
             </div>
         
