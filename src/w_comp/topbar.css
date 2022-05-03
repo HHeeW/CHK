@@ -1,0 +1,42 @@
+.w_container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border-top: 3px solid #aaa; */
+    border-bottom: 5px solid #00c8c8;
+}
+.w_container> img{
+    width: 350px;
+    height: 180px;
+    display: inline-block;
+}
+.w_play{
+    float: right;
+    display: flex;
+    font-size: 30px;
+}
+.w_play>li>i{
+    color: #00c8c8;
+}
+.w_play>i{
+    margin-right: 5px;
+}
+#up{
+    padding-bottom: 30px;
+}
+.w_top{
+    display: inline-flex;
+    margin-right: 100px;
+    float: right;
+     margin-top: -50px;
+}
+.w_top li a{
+    font-size: 2em;
+   
+}
+.fa-star{
+    color: yellow;
+}
+.w_top span{
+    color: #00c8c8;
+    font-size: 2em;
+}

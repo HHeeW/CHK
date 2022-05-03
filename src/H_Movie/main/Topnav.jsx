@@ -92,8 +92,13 @@ function Topnav() {
               <MovieBox>
                 <Link to={"/"}> 영화</Link>
               </MovieBox>
+<<<<<<< HEAD
               <TicketBox><Ticket href='#'>예매</Ticket></TicketBox>
               <StoreBox><Store href='#'>스토어</Store></StoreBox>
+=======
+              <TicketBox><Link to={"/ticket"}>예매</Link></TicketBox>
+              <StoreBox><Link to={"/snack"}>스토어</Link></StoreBox>
+>>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
               <EventBox><Link to={'/preview'}> 이벤트</Link></EventBox>
             </Menu>
           </MenuBox>

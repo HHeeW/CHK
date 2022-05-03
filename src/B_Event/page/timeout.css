@@ -32,6 +32,7 @@
 }
 .b_pageNum{
     font-family: "GowunDodum-Regular";
+<<<<<<< HEAD
     display: flex;
     width: 300px;
     justify-content: space-around;
@@ -39,6 +40,17 @@
    left: 35%;
     position: absolute;
     bottom: -100px;
+=======
+    justify-content: space-around; 
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center; 
+    margin-left:36%
+  
+ 
+
+>>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
  
 
 }

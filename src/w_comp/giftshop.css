@@ -1,0 +1,98 @@
+.fa-hotjar{
+    color: red;
+}
+.w_s-n>h2{
+    font-size: 30px;
+    margin-bottom:30px;
+}
+.w_s-n .w_movie-shop>h3{
+    font-size: 25px;
+}
+
+.w_movie-shop>img{
+    width: 100%;
+    height: 400px;
+}
+.fa-minus{
+    transform:rotate(90deg);
+    color: #00C8C8;
+}
+.w_merchlist{
+    /* background-color: #ddd; */
+    margin-left: -70px;
+    width: 1400px;
+ 
+}
+.w_merchlist_box {
+    transition: opacity 0.2s; 
+    position: relative;
+}
+ul.slick-dots{
+    width: 1300px !important; 
+    text-align: center;
+}
+/* .w_merchlist_box:hover{
+    cursor: pointer;
+    border: 1px solid #00C8C8;
+} */
+.w_merchlist_box>img{
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    opacity: 1;
+    transition: all 0.3s ease 0s;
+    overflow: hidden;
+}
+.w_merchlist_box>p{
+    font-size: 130%;
+}
+.w_merchlist_box>h4{
+    margin-bottom: -15px;
+}
+
+
+
+.w_merchlist_box > .w_list-click {
+    color: #00c8c8;
+    bottom: 250px;
+    opacity: 0;
+    position: absolute; 
+    text-align: center; 
+    width: 65%;
+    margin-left: 13%;
+    transition: all .3s ease;
+}
+.w_list-click {
+    border: none;
+     width: 100px;
+    height: 15%; 
+}
+.w_list-click >button{
+    /* margin-right: 10px; */
+    font-size: 300%;
+    border: none;
+    color: #00C8C8;
+    background-color: transparent;
+    cursor: pointer;
+  
+}
+.w_list-click>button:hover img{
+    transform: scale(1.05, 1.05); 
+    transition: all .3s ease;
+    opacity: 0.15;
+    cursor:  pointer;
+   
+} 
+/* hover */
+.w_merchlist_box>img:hover {
+    background-color: rgba(0,0,0,0.5);
+    transform: scale(1.05, 1.05); 
+    transition: all .3s ease;
+    opacity: 0.15;
+    cursor:  pointer;
+   
+}
+.w_merchlist_box:hover .w_list-click {
+    opacity: 1;
+    transition: all .3s ease; 
+} 

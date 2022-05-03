@@ -1,0 +1,104 @@
+/******* snack-menu ******/
+.w_s-n{
+    border: none;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.w_s-n h2{
+    border-bottom: 3px solid #00C8C8;
+    padding-bottom: 10px;
+}
+.w_s-n h2 i{
+    font-size: 5px;
+    
+}
+.w_snack-bar_box{
+    height: 950px;
+}
+.w_snack-bar{
+    display: flex;
+    margin-top: -20px;
+    padding-bottom: 10px;
+    padding-left:17px;
+    position: relative;
+    
+    border-bottom: 3px solid #00C8C8;
+}
+.w_rrr{
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+.w_snack-bar>li{
+    margin-right: 10px;
+}
+.w_snack-bar>li>button{
+    font-size: 18px;
+    border: none;
+    background-color:transparent;
+}
+.w_snack-bar>li>button:hover{
+    cursor: pointer;
+    color: #00c8c8;
+    transition: all 0.8s;
+}
+.w_snack-bar>li:nth-child(3){
+    margin-left: 10px;
+}
+.w_snack-bar>li:nth-child(5){
+    margin-left: 10px;
+}
+.w_snack-bar>i{
+    transform:rotate(90deg);
+    color: #00C8C8;
+    font-size: 18px;
+}
+/******* popcorn ******/
+.w_s-p{
+    border: none;
+    width: 1260px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.w_box{
+    flex: 0 0 30%;
+    text-align: center;
+    width: 200px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #EAE9E5;
+    margin: 10px;
+}
+.w_box:hover{
+    border: 2px solid #00c8c8;
+}
+.w_pop{
+    width: 80%;
+    height: 280px;
+    margin: 27px auto;
+    border-radius: 10px;
+}
+.w_pop:hover{
+    background-color: rgba(0,0,0,.35);
+}
+.w_box>p{
+    font-size: 85%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 27px;
+}
+.w_box>p:nth-child(2){
+    font-size: 18px;
+}
+.w_box>p>i{
+    transform: rotate(90deg);
+}
+
+/******* drink ******/
+
+
+
+/******* side ******/
