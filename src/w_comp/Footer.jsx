@@ -15,8 +15,6 @@ const Footer = () => {
     setSelectValue(e.target.value);
   };
 
-
-
   return (
     <div className="w_footer">
         <div className="w_footer-con">

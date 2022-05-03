@@ -1,13 +1,17 @@
+import React, { useEffect } from 'react';
 import Movie from './movie/Movie'
 import Movie_Page_List from './movie_detail/Movie_Page_List'
 import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScrollToTop from './main/ScrollToTop';
 
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
       <Routes>
         <Route path='/' element={<Movie />} />
         <Route path='/Movie_Page_List1' element ={<Movie_Page_List />} />
@@ -31,6 +35,7 @@ function App() {
         <Route path='/Movie_Page_List19' element ={<Movie_Page_List />} />
         <Route path='/Movie_Page_List20' element ={<Movie_Page_List />} />
       </Routes>
+      </>
   )
 }
 

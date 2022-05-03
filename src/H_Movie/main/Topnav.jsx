@@ -27,13 +27,6 @@ const LogoBox = styled.div`
   width: 20%;
   height 100%;
 `
-const Logo = styled.img`
-  margin-left: 0;
-  width:70%;
-  height:100px;
-  background: url(H_images/logo.png) no-repeat center;
-  background-size: contain;
-`
 const MenuBox = styled.div`
   height: 100%;
   width:55%;
@@ -76,7 +69,9 @@ function Topnav() {
       <FixBox>
         <TopNav>  
           <LogoBox>
-          <Link to={"/"}><Logo/></Link>
+          <Link to={"/"}>
+            <img src="H_images/logo.png" alt="logo"className='H_logo' />
+          </Link>
           </LogoBox>
           <MenuBox>
             <Menu>

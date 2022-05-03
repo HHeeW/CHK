@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import './movie_page.css'
 import Movie_Page_Slider from './Movie_Page_Slider';
-import { Link } from 'react-router-dom';
 
 
 const Movie_Page = (props) => {
@@ -34,7 +33,7 @@ const Movie_Page = (props) => {
                 </div>
             </div>
             <div className="H_detail">
-                <img className='H_detail_poster' src={props.poster} alt={props.poster} />
+                <img className='H_detail_poster' src={props.poster} alt="" />
                 <div className="H_movie_detail_text_box">
                     <h1>{props.title}</h1>
                     <h4>{props.entitle}</h4>
@@ -43,7 +42,7 @@ const Movie_Page = (props) => {
                     <p>장르 : {props.gen} / 기본 : <span className={props.age}></span> {props.bas}</p>
                     <p>개봉 : {props.open}</p>
                     <div className="H_ticketing_box">
-                    <Link to={'/ticket'}><button className="H_ticketing">예매</button></Link>
+                        <button className="H_ticketing">예매</button>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,6 @@
 .k-container-nav{
     padding: 10px;
     display: flex;
-    font-family: "HoengseongHanu";
 }
 .k-box1{
     border: 1px solid black;
@@ -19,7 +18,7 @@
     text-align: center;
 }
 .k-box1-middle{
-    background-color: violet;
+    background-color: gray;
     height: 60px;
     display: flex;
     align-items: center;
@@ -48,6 +47,9 @@
     height: 35px;
     display: flex;
     align-items: center;
+}
+.k-bar:hover{
+    background-color: darkgrey;
 }
 .k-age{
     flex: 0 0 15%;
@@ -82,6 +84,12 @@
     display: flex;
     align-items: center;
 }
+.k-bar3:hover{
+    background-color: darkgrey;
+}
+.k-bar4:hover{
+    background-color: darkgrey;
+}
 .k-age2{
     padding: 5px;
 }
@@ -96,12 +104,12 @@
 }
 
 .k-box2-top{
-    background-color: pink;
+    background-color: #00c9c7;
     color: white;
     text-align: center;
 }
 .k-box2-middle{
-    background-color: antiquewhite;
+    background-color: gray;
     display: flex;
     height: 60px;
 }
@@ -126,7 +134,6 @@
 .k-box2-bottom{
     height: 650px;
     display: flex;
-   
 }
 .k-box2-bottom-leftbox{
     flex: 0 0 50%;
@@ -144,26 +151,93 @@
     border-bottom: 1px solid black;
 }
 .k-box3{
-    border: 2px solid blue;
+    border: 2px solid black;
     width: 100%;
     height: 800px;
     overflow: hidden;
 }
+.k-box3-checkbox{
+    flex: 0 0 100%;
+    height: 50px;
+    display: flex;
+}
+.k-box3-checkbox div{
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 .k-box3-top{
     flex: 0 0 100%;
     height: 250px;
-    border: 1px solid black;
+    display: flex;
 }
-.k-box3-top img{
-    width: 50%;
+.k-bar5{
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.k-box3-top-left{
+    flex: 0 0 50%;
+}
+.k-box3-top-left img{
+    width: 100%;
     height: 250px;
 }
-.k-box3-right{
+
+.k-box3-top-right{
+    flex: 0 0 50%;
+    padding-top: 40px;
+    border: 1px solid black;
+}
+.k-box3-top-right div{
+    padding: 5px;
+}
+.k-kkkk{
+    position: relative;
+    z-index: 100;
+}
+.k-box3-middle{
     width: 100%;
-    height: 200px;
+    height: 150px;
     border: 1px solid red;
 }
-
+.k-mySwiper{
+    padding: 25px;
+}
+.k-box3-bottom{
+    border: 1px solid black;
+    height: 500px;
+}
+.k-box3-bottom-top{
+    padding: 5px;
+}
+.k-box3-bottom-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+.k-box3-bottom-bottom div{
+    border: 1px solid black;
+    min-width: 100px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px;
+}
+.k-slidebox{
+    width: 650px;
+    height: 600px;
+    position: absolute;
+    z-index: 200;
+    background-color: aquamarine;
+    right: 0;
+    animation-name: example;
+    animation-duration: 2s;
+}
 .k-swiper {
     width: 100%;
     height: 100%;
@@ -177,13 +251,15 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
   }
+
+@keyframes example {
+    from {width: 0px;}
+    to {width: 600px;}
+}
+.k-ii{
+    color: blue;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+}

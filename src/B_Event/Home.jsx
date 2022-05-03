@@ -39,7 +39,7 @@ export default class Event extends Component {
   
         <>
         <div className='b_container'>
-        <h1 className='b_title'><Link to="/">이벤트</Link></h1>
+        <h1 className='b_title'><Link to="/preview">이벤트</Link></h1>
         <ul className='b_nav'>
         <li><Link to="/preview" className='b_movie b_menu1' onClick={btn1} > 무대인사 / 시사회</Link></li>
         <li><Link to="/reserve" className='b_menu2'onClick={btn2} >영화 / 예매</Link></li>
