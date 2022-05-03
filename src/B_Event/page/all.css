@@ -1,0 +1,62 @@
+.b_conBox{
+    display: flex;
+  margin: 50px auto 0;
+  width: 1200px;
+  font-family: 'GowunDodum-Regular';
+}
+
+.b_conList{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+
+}
+.b_listBox{
+    width: 30%;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.b_listBox:hover{
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.b_conTitle{
+    font-size: 20px;
+    line-height: 40px;
+    padding-left: 5px;
+}
+.b_date{
+    color: #999;
+    font-size: 13px;
+    padding-left: 5px;
+}
+.b_listBox img{
+    display:block;
+    width : 100%;
+    border-radius: 10px;
+
+}
+.b_reserveTitle{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.b_more{
+   background-color: rgba(0,0,0,0.03);
+    color: #999;
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+    margin-top: 20px;
+    height: 45px;
+}
+.b_more:hover{
+    color: #000;
+}
+
+
+

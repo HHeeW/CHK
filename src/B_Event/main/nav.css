@@ -1,0 +1,94 @@
+.b_head{
+    height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.b_imgbox img{
+   max-width: 15%;
+   margin-top: 20px;
+
+}
+span.b_sm{
+  display: block;
+  font-family: "GowunDodum-Regular";
+    font-size: 13px;
+    text-align: left;
+
+}
+
+.b_point{
+    color: #00c9c7;
+}
+.b_head a{
+    display: block;
+    text-align: center;
+    
+}
+.b_head span:not(.b_sm) {
+    font-size: 35px;
+}
+.b_full{
+    width:100%;
+    border-bottom: 1px solid #333;
+  
+}
+.b_Nav{
+    font-size: 20px;
+    margin-top: 30px;
+}
+.b_navGnb{
+    width: 1200px;
+    margin-left: auto;
+    margin-right:auto ;
+    display: flex;
+    justify-content: space-between;
+    position: relative; 
+    margin-bottom: 20px;
+    padding-left: 10px;
+   
+}
+
+.b_navGnb li {
+    text-align: center;
+}
+.b_lnb{
+  margin-top: 20px;
+    font-size: 18px;
+    font-family: "GowunDodum-Regular"; 
+    display: none;
+    
+
+}
+.b_lnb a{
+    display: block;
+    line-height: 50px;
+}
+.b_lnb a:hover{
+    font-weight: bold;
+}
+
+input .b_searchBox{
+    width: 100px;
+    outline-width: 0.5px ;
+}
+
+.b_search button{
+    border: none;
+    background-color: #fff;
+}
+.b_navGnb:hover:not(.b_lnb) .b_lnb{
+    display: block;
+    animation: soft 3s;
+
+}
+@keyframes soft {
+    from{
+        opacity: 0;
+    }   
+    to{
+        opacity: 1;
+        transition: all 0.5s ease-out;
+    }
+}

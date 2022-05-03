@@ -1,0 +1,15 @@
+.b_main{
+    height: 330px;
+}
+.b_banner{
+   height: 300px;
+} 
+.b_pause{
+    font-size: 30px;
+    border-radius: 50%;
+    border: 1px solid #999;
+    float: right;
+}
+.b_img{
+    border-radius: 20px;
+}
