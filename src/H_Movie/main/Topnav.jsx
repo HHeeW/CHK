@@ -52,10 +52,6 @@ const MovieBox = styled.li``
 const TicketBox = styled.li``
 const StoreBox = styled.li``
 const EventBox = styled.li``
-const Movie = styled.a``
-const Ticket = styled.a``
-const Store = styled.a``
-const Event = styled.a``
 
 const Member = styled.div`
   height: 100%;
@@ -99,16 +95,16 @@ function Topnav() {
           </MenuBox>
           <Member>
             <LoginBox><Link to="login">
-              <Login size={40} />
+              <Login size={30} />
               로그인
               </Link>
             </LoginBox>
             <SignUpBox>
-              <PersonAdd size={40} />
+              <PersonAdd size={30} />
               <Link to="/join" > 회원가입</Link>
             </SignUpBox>
             <SerchBox>
-              <Search size={40} />
+              <Search size={30} />
               검색
             </SerchBox>
           </Member>
