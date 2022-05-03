@@ -17,9 +17,9 @@ const GiftShop = () => {
         };
   return (
     <>
-    // <TopBar />
+     <TopBar />
     <div className="w_s-n">
-        <h2><i class="fa-solid fa-circle"></i> gift - shop </h2>
+        <h2><i class="fa-solid fa-circle"></i> Gift - Shop : 모든걸 골라 봐~!</h2>
           <div className="w_movie-shop">
             <h3><i class="fa-solid fa-minus"></i> 닥터 스트레인지: 대혼돈의 멀티버스</h3>
             <img src="w_images/doctor.jpg" alt="닥터스트레인지"></img>
@@ -27,9 +27,6 @@ const GiftShop = () => {
         <br></br>
         <div className="w_merchlist">
           <Slider {...settings}>
-            
-            
-            
             <div className="w_merchlist_box ">
               <img src="w_images/doctor/marvel_airpot.jpg" alt='marvel_airpot'></img>
               <p>마블 에어팟 케이스</p>
@@ -213,7 +210,7 @@ const GiftShop = () => {
         </div>
           <br></br><br></br><br></br>
           <div className="w_movie-shop">
-            <h3><i class="fa-solid fa-minus"></i> 겨 울 왕 국</h3>
+            <h3><i class="fa-solid fa-minus"></i> 겨울왕국</h3>
             <img src="w_images/forzen.jpg" alt="겨울왕국"></img>
           </div>
           <br></br>
@@ -282,7 +279,7 @@ const GiftShop = () => {
           <br></br><br></br><br></br>
           <div className="w_movie-shop">
             <h3><i class="fa-solid fa-minus"></i> 토이 스토리 4</h3>
-            <img src="w_images/toystory.png" alt="토이 스토리 4"></img>
+            <img src="w_images/toy.png" alt="토이 스토리 4"></img>
           </div>
           <br></br>
         <div className="w_merchlist">
@@ -413,7 +410,7 @@ const GiftShop = () => {
         <br></br><br></br><br></br>
           <div className="w_movie-shop">
             <h3><i class="fa-solid fa-minus"></i> 극장판 짱구는 못말려 - 격돌! 낙서왕국과 얼추 네 명의 용사들</h3>
-            <img src="w_images/jjang-gu.jpg" alt="짱구"></img>
+            <img src="w_images/jjang-gu.PNG" alt="짱구"></img>
           </div>
           <br></br>
         <div className="w_merchlist">
