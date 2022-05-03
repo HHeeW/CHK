@@ -1,11 +1,7 @@
 
 .b_login{
     /* background-color: #c6f8f7; */
-<<<<<<< HEAD
     margin: 50px auto 0;
-=======
-    margin: 100px auto 150px;
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
     width: 300px;
     height: 500px;
 }
@@ -98,13 +94,8 @@
 
 }
 .b_text{
-<<<<<<< HEAD
-    line-height: 100px;
-=======
     text-align: center;
     line-height: 50px;
-    
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
 
 }
 

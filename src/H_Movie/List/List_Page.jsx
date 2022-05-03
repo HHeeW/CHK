@@ -1,10 +1,6 @@
 const List_Detail = () => {
     const movies_detail = [
-<<<<<<< HEAD
         {poster:"H_images/85715_320.jpg" , title:"닥터 스트레인지: 대혼돈의 멀티버스", entitle: "Doctor Strange in the Multiverse of Madness", dir:"샘 레이미", act:"베네딕트 컴버배치 ,  엘리자베스 올슨 ,  베네딕트 웡 ,  레이첼 맥아담스 ,  치웨텔 에지오포 ,  소치틀 고메즈", grn: " 액션, 어드벤처, 환타지", bas:"126분, 미국", age:"H_12", ticketing:"9.3%", open:"2022.05.04", link:"Rt_UqUm38BI",
-=======
-        {poster:"H_images/85715_320.jpg" , title:"닥터 스트레인지: 대혼돈의 멀티버스", entitle: "Doctor Strange in the Multiverse of Madness", dir:"샘 레이미", act:"베네딕트 컴버배치 ,  엘리자베스 올슨 ,  베네딕트 웡 ,  레이첼 맥아담스 ,  치웨텔 에지오포 ,  소치틀 고메즈", gen: " 액션, 어드벤처, 환타지", bas:"126분, 미국", age:"H_12", ticketing:"9.3%", open:"2022.05.04", link:"Rt_UqUm38BI",
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
         detail_title:`지금껏 본 적 없는 마블의 극한 상상력!
         
         5월, 광기의 멀티버스가 깨어난다!`,
@@ -14,10 +10,7 @@ const List_Detail = () => {
         slider1:"d1", slider2:"d2", slider3:"d3", slider4:"d4", slider5:"d5", slider6:"d6"},
       
        {poster:"H_images/39614_1000.jpg" , title:"해리포터와 죽음의 성물 2", entitle: "Harry Potter And The Deathly Hallows: Part2",  dir:"데이빗 예이츠", act:"다니엘 래드클리프 ,  엠마 왓슨 ,  루퍼트 그린트", gen:"환타지, 어드벤처", bas:" 131분, 미국, 영국", age:"H_all", ticketing:"9.0%", open:"2011.07. 14", link:"_31zwi0U8NE",
-<<<<<<< HEAD
        slider:"h-1", slider:"h-2", slider:"h-3", slider:"h-4", slider:"h-5", slider:"h-6",
-=======
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
        detail_title:`가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!`,
        detail: `1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서
         강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다.
@@ -146,11 +139,7 @@ const List_Detail = () => {
        
        살아남기 위해 혈안이 된 나쁜 놈들 사이에서 서로 물지 않으면 물리는 지옥도가 펼쳐진다.` },
        
-<<<<<<< HEAD
        { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-and-Run Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
-=======
-       { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-andRun Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
        detail_title:`Hit and Run 상황 발생,
        순마 출동합니다!`,
        detail: `경찰 내 최고 엘리트 조직 내사과 소속 경위 ‘은시연’(공효진). 

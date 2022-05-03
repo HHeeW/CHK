@@ -7,28 +7,16 @@ render() {
   setInterval(slide,5000);
 
   function slide(){
-<<<<<<< HEAD
     $(function(){
     $('.b_sideImg').animate({
       'top' : '-300px'
     },1000,function(){
-=======
-  
-    $('.b_sideImg').animate({
-      'top' : '-300px'
-    },4000,function(){
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
       $('.b_sideImg img:eq(0)').clone().appendTo('.b_sideImg');
       $('.b_sideImg img:eq(0)').remove();
       $('.b_sideImg').css('top',0);
     })
-<<<<<<< HEAD
   })
 }
-=======
-  }
-
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
 
    const imgList = [
     {id : 1, url : "b_images/sideimg1.jpg"},
@@ -56,7 +44,3 @@ render() {
     )
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> c5fd1f46780bd5c4a87853634fa8c5213521ef81
