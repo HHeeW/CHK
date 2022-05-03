@@ -216,27 +216,79 @@
     padding: 5px;
 }
 .k-box3-bottom-bottom{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 10px;
-}
-.k-box3-bottom-bottom div{
+    height: 70px;
     border: 1px solid black;
-    min-width: 100px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 2px 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+.k-box3-datebox{
+    border: 1px solid black;
+    min-width: 90px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px;
+    cursor: pointer;
+}
+.k-box3-datebox div{
+    text-align: center;
+}
+/* 슬라이드 좌석선택 스타일 */
 .k-slidebox{
-    width: 650px;
-    height: 600px;
-    position: absolute;
+    width: 800px;
+    height: 800px;
+    position: fixed;
     z-index: 200;
-    background-color: aquamarine;
+    background-color: rgba(5, 0, 0, 0.5);
     right: 0;
+    transform: translateX(-350px);
     animation-name: example;
-    animation-duration: 2s;
+    animation-duration: 1s;
+}
+.k-slidebox-container{
+    width: 800px;
+    height: 800px;
+    border: 1px solid black;
+    background-color: green;
+}
+.k-slidebox-top{
+    text-align: center;
+    background-color: #00c9c7;
+    color: white;
+}
+.k-slidebox-middle{
+    display: flex;
+    border: 1px solid black;
+    height: 200px;
+}
+.k-slidebox-middle-left{
+    flex: 0 0 50%;
+    height: 200px;
+    border: 1px solid black;
+    background-color: burlywood;
+}
+.k-slidebox-middle-left div{
+    padding: 5px;
+}
+.k-slidebox-middle-right{
+    flex: 0 0 50%;
+    height: 200px;
+    border: 1px solid black;
+    background-color: darkorchid;
+}
+.k-slidebox-updownbox{
+    display: flex;
+}
+.k-upbutton{
+    width: 20px;
+    text-align: center;
+}
+.k-downbutton{
+    width: 20px;
+    text-align: center;
+}
+/* 슬라이드 좌석선택 끝 */
+.k-mySwiper{
+    padding-top: 30px;
 }
 .k-swiper {
     width: 100%;
@@ -255,11 +307,11 @@
 
 @keyframes example {
     from {width: 0px;}
-    to {width: 600px;}
+    to {width: 800px;}
 }
 .k-ii{
-    color: blue;
-    width: 20px;
+    width: 25px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
 }

@@ -53,11 +53,18 @@ export default function Nav() {
         {id: 3, title: '강남구'},
         {id: 4, title: '동작구'}
     ];
-    const arr3 = [
-        {id: 1, title: '풍무'},
-        {id: 2, title: '사우'},
-        {id: 3, title: '걸포'}
+    const arr3 = [ // 객체가 3개라 slide 일반 청소년 우대랑 같이 씀
+        {id: 1, title: '풍무', name: '일반'},
+        {id: 2, title: '사우', name: '청소년'},
+        {id: 3, title: '걸포', name: '우대'}
     ];
+
+    const arr4 = [
+        {id: 1, clock1: '10:45', clock2: '12:45', clock3: '03:25', clock4: '05:50', dimension: '2D'},
+        {id: 2, clock1: '08:45', clock2: '09:10', clock3: '01:24', clock4: '03:40', dimension: '3D'},
+        {id: 3, clock1: '07:05', clock2: '09:35', clock3: '12:30', clock4: '01:50', dimension: '3Ds MAX'},
+    ]
+
 
 const List = (props) =>{
     const arr2 = [];
@@ -137,20 +144,50 @@ const List5 = (props) => {
 }
 const List6 = (props) => {
     const arr = [];
+    for(let i of props.arr)
         arr.push(<>
-        <div className='k-box3-bottom-top'>2d</div>
-        <div key={props.id} className='k-box3-bottom-bottom'>
-        <div onClick={slidepage}></div>
-        <div onClick={slidepage}></div>
-        <div onClick={slidepage}></div>
-        <div onClick={slidepage}></div>
-    </div>
+         <div className='k-box3-bottom-top'>{i.dimension}</div>
+
+            <div className='k-box3-bottom-bottom'>
+                <div className='k-box3-datebox' onClick={slidepage}>
+                    <div>{i.clock1}</div>
+                    <div>빈좌석/전체</div>
+                </div>
+                <div className='k-box3-datebox' onClick={slidepage}>
+                    <div>{i.clock2}</div>
+                    <div>빈좌석/전체</div>
+                </div>
+                <div className='k-box3-datebox' onClick={slidepage}>
+                    <div>{i.clock3}</div>
+                    <div>빈좌석/전체</div>
+                </div>
+                <div className='k-box3-datebox' onClick={slidepage}>
+                    <div>{i.clock4}</div>
+                    <div>빈좌석/전체</div>
+                </div>
+            </div>
     </>)
     return (
         <>{arr}</>
     )
 }
-
+const List7 = (props) => {
+    const arr = [];
+    for(let i of props.arr){
+    arr.push(
+        <>
+        <div className='k-slidebox-updownbox'>
+             <div>{i.name}</div>
+                            <div><i className="fa-solid fa-circle-up k-upbutton" id={i.id} onClick={up}></i></div>
+                            <div>{updown[i.id-1]}</div>
+                            <div><i className="fa-solid fa-circle-down k-downbutton" id={i.id} onClick={down}></i></div>
+                        </div>
+                        </>)
+    }
+return(
+    <>{arr}</>
+)
+}
 
 let [mode, setMode] = useState('bar');
 let [location, setLocation] = useState('seoul');
@@ -162,27 +199,10 @@ let [hoon, setHoon] = useState(1); // 좌석 화면 content4
 let [slidedisplay, setSlidedisplay] = useState('false'); // 시간누르면 슬라이드 화면 display
 let [checkdisplay, setCheckdisplay] = useState('none'); // 영화 선택 아이콘
 let [check2display, setCheck2display] = useState('none'); // 날짜 선택 아이콘
-let [datediplay, setDatedisplay] = useState([]); // 날짜 선택시 
+let [datedisplay, setDatedisplay] = useState([]); // 날짜 선택시 해당 날짜만 background 줘야해서 배열
+let [updown, setUpdown] = useState([1, 0, 0]); // slidebox 일반 청소년 우대 updown
 
-anime({
-    targets: '.k-kkkk',
-    // translateX: {
-    //   value: 250,
-    //   duration: 800
-    // },
-    rotate: {
-      value: 360,
-      duration: 1200,
-      easing: 'easeInOutSine'
-    },
-    // scale: {
-    //   value: 2,
-    //   duration: 1600,
-    //   delay: 800,
-    //   easing: 'easeInOutQuart'
-    // },
-     // All properties except 'scale' inherit 250ms delay
-  });
+
 
 const bar = () => {
     setMode('bar');
@@ -216,7 +236,25 @@ const changeColor = (e) => {
     setCheckdisplay('block');
     setHoon(hoon + 1);
 
-    
+    anime({
+        targets: '.k-kkkk',
+        // translateX: {
+        //   value: 250,
+        //   duration: 800
+        // },
+        rotate: {
+          value: 360,
+          duration: 1200,
+          easing: 'easeInOutSine'
+        },
+        // scale: {
+        //   value: 2,
+        //   duration: 1600,
+        //   delay: 800,
+        //   easing: 'easeInOutQuart'
+        // },
+         // All properties except 'scale' inherit 250ms delay
+      });
     
     console.log(e.currentTarget.id);
     setTae(e.currentTarget.id);
@@ -228,8 +266,6 @@ const changeColor = (e) => {
     // console.log(e.target.id);
    
     console.log(e.currentTarget.id);
-   
-    newColor = [...color];
 
     newColor[e.currentTarget.id-1] = 'rgb(109, 130, 110)';
     setColor(newColor);
@@ -242,18 +278,35 @@ const sort = (e) => {
 const slidepage = () => {
     setSlidedisplay(!slidedisplay);
 }
-const datecheck = (e) => {
-    setCheck2display('block');
-    setDatedisplay('red');
+const datecheck = (e) => { // 날짜 누르면
+    setCheck2display('block'); // 날짜 아이콘 block
     setHoon(hoon + 1);
-
-    console.log(e.currentTarget.id);
+    let newDate = [];
+    newDate[e.currentTarget.id] = 'rgb(109, 130, 110)';
+    setDatedisplay(newDate);
+}
+const up = (e) => { // slide 일반 청소년 up
+    let count =  [...updown];
+    switch(true){
+        case e.target.id === '1' : console.log('1입니다.'); count[0] = parseInt(updown[0]+1);  setUpdown(count); break;
+        case e.target.id === '2' : console.log('2입니다.'); count[1] = parseInt(updown[1]+1);  setUpdown(count); break;
+        case e.target.id === '3' : console.log('3입니다.'); count[2] = parseInt(updown[2]+1);  setUpdown(count); break;
+    } 
+}
+const down = (e) => { // slide 일반 청소년 down
+    let count =  [...updown];
+    switch(true){
+        case e.target.id === '1' : console.log('1입니다.'); count[0] = parseInt(updown[0]-1);  setUpdown(count); break;
+        case e.target.id === '2' : console.log('2입니다.'); count[1] = parseInt(updown[1]-1);  setUpdown(count); break;
+        case e.target.id === '3' : console.log('3입니다.'); count[2] = parseInt(updown[2]-1);  setUpdown(count); break;
+    }
 }
 
 let content = null;
 let content2 = null;
 let content3 = null;
 let content4 = null;
+let content5 = null;
 
 if(mode === 'bar'){
     content = <List arr={arr}></List>
@@ -271,17 +324,33 @@ if(tae !== 0){
     content3 = <List5 arr={arr}></List5>
 }
 if(checkdisplay === 'block' && check2display === 'block'){
-content4 = <List6></List6>
+content4 = <List6 arr={arr4}></List6>
 }
+content5 = <List7 arr={arr3}></List7>
 
 
 
 
   return (
     <div className='k-container-nav'>
+        {/* 슬라이드  좌석선택*/}
 
-        <div className='k-slidebox' style={{display: slidedisplay ? 'none' : 'block'}}></div>
-        
+        <div className='k-slidebox' style={{display: slidedisplay ? 'none' : 'block'}}>
+            <div className='k-slidebox-container'>
+                <div className='k-slidebox-top'>인원/좌석 선택</div>
+                <div className='k-slidebox-middle'>
+                <div className='k-slidebox-middle-left'>
+                    {content5}
+                    
+                        
+                </div>
+                    <div className='k-slidebox-middle-right'></div>
+                </div>
+            </div>
+        </div>
+ 
+        {/* 슬라이드  좌석선택 끝*/}
+
         <div className='k-box1'>
             <div className='k-box1-top'>영화</div>
             <div className='k-box1-middle'>
@@ -329,32 +398,30 @@ content4 = <List6></List6>
 
 
             <div className='k-box3-middle'>
-                <Swiper slidesPerView={7} spaceBetween={60} freeMode={true} pagination={{ clickable: true, }}
-                    className="k-mySwiper">
-                    <SwiperSlide><div className='k-ii' id='1' onClick={datecheck} style={{ backgroundColor : datediplay }}>1</div><br />
-                    <div id='1' onClick={datecheck}>일</div></SwiperSlide>
-                    <SwiperSlide><div className='k-ii' id='2' onClick={datecheck}>2</div><br />
-                    <div id='2' onClick={datecheck}>월</div></SwiperSlide>
-                    <SwiperSlide><div className='k-ii' id='3'>3</div><br />
-                    <div>수</div></SwiperSlide>
-                    <SwiperSlide><div>4</div><br />
-                    <div>목</div></SwiperSlide>
-                    <SwiperSlide><div>5</div><br />
-                    <div>금</div></SwiperSlide>
-                    <SwiperSlide><div>6</div> <br />
-                    <div>토</div></SwiperSlide>
-                    <SwiperSlide><div>7</div><br />
-                    <div>일</div></SwiperSlide>
-                    <SwiperSlide><div>8</div><br />
-                    <div>월</div></SwiperSlide>
-                    <SwiperSlide><div>9</div><br />
-                    <div>화</div></SwiperSlide>
+                {/* 외부에서 가져온 슬라이드라서 useState가 되지않는다. 그래서 노가다로 반복 */}
+                <Swiper slidesPerView={7} spaceBetween={60} freeMode={true} pagination={{ clickable: true, }} modules={[Pagination]} className="k-mySwiper">
+                    <SwiperSlide><div className='k-ii' id='1' onClick={datecheck} style={{ backgroundColor : datedisplay[1] }}>1</div><br />
+                    <div className='k-ii' id='1' onClick={datecheck}>일</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='2' onClick={datecheck} style={{ backgroundColor : datedisplay[2] }}>2</div><br />
+                    <div className='k-ii' id='2' onClick={datecheck}>월</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='3' onClick={datecheck} style={{ backgroundColor : datedisplay[3] }}>3</div><br />
+                    <div className='k-ii' id='3' onClick={datecheck}>화</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='4' onClick={datecheck} style={{ backgroundColor : datedisplay[4] }}>4</div><br />
+                    <div className='k-ii' id='4' onClick={datecheck}>수</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='5' onClick={datecheck} style={{ backgroundColor : datedisplay[5] }}>5</div><br />
+                    <div className='k-ii' id='5' onClick={datecheck}>목</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='6' onClick={datecheck} style={{ backgroundColor : datedisplay[6] }}>6</div><br />
+                    <div className='k-ii' id='6' onClick={datecheck}>금</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='7' onClick={datecheck} style={{ backgroundColor : datedisplay[7] }}>7</div><br />
+                    <div className='k-ii' id='7' onClick={datecheck}>토</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='8' onClick={datecheck} style={{ backgroundColor : datedisplay[8] }}>8</div><br />
+                    <div className='k-ii' id='8' onClick={datecheck}>일</div></SwiperSlide>
+                    <SwiperSlide><div className='k-ii' id='9' onClick={datecheck} style={{ backgroundColor : datedisplay[9] }}>9</div><br />
+                    <div className='k-ii' id='9' onClick={datecheck}>월</div></SwiperSlide>
                 </Swiper>
             </div>
             <div className='k-box3-bottom'>
-                {content4}
-                {content4}
-                {content4}
+               {content4}
             </div>
         </div>
     </div>
