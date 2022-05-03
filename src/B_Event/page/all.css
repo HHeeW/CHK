@@ -10,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; 
+
 }
 .b_listBox{
     width: 30%;
@@ -18,12 +19,9 @@
     border-radius: 10px;
 }
 
-
 .b_listBox:hover{
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
-    cursor: pointer;   
-    transform: scale(1.06);
-    transition: all 0.5s;
+    cursor: pointer;
 }
 
 .b_conTitle{

@@ -1,5 +1,8 @@
 import React from 'react'
 import './timeout.css';
+import styled from 'styled-components'
+import {IosArrowLeft} from '@styled-icons/fluentui-system-filled/IosArrowLeft'
+import {IosArrowRight}from '@styled-icons/fluentui-system-filled/IosArrowRight'
 
 
 export default function Timeout() {
@@ -20,7 +23,7 @@ export default function Timeout() {
 
         {/* 다음페이지  */}
         <div className='b_pageNum'>
-        <a href="#"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+         <a href="#"><IosArrowLeft size={20}/></a> 
         <a href="#">1</a>
         <a href="#">2</a>
         <a href="#">3</a>
@@ -31,7 +34,7 @@ export default function Timeout() {
         <a href="#">8</a>
         <a href="#">9</a>
         <a href="#">10</a>
-        <a href="#"><span class="material-symbols-outlined">arrow_forward_ios</span></a>
+        <a href="#"><IosArrowRight size={20}/></a> 
         </div>
     </div>
     </div>

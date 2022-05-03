@@ -1,7 +1,7 @@
 
 .b_login{
     /* background-color: #c6f8f7; */
-    margin: 50px auto 0;
+    margin: 100px auto 150px;
     width: 300px;
     height: 500px;
 }
@@ -96,6 +96,7 @@
 .b_text{
     text-align: center;
     line-height: 50px;
+    
 
 }
 
