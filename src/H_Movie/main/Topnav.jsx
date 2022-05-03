@@ -33,7 +33,6 @@ const Logo = styled.img`
   height:100px;
   background: url(H_images/logo.png) no-repeat center;
   background-size: contain;
-  border: none;
 `
 const MenuBox = styled.div`
   height: 100%;
@@ -57,21 +56,14 @@ const Member = styled.div`
   height: 100%;
   width:25%;
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-around;
   align-items: center;
   padding-right: 30px;
   cursor: pointer;
 `
-const LoginBox = styled.div`
-  display:flex;
-  justify-content:column;
-  align-items: center;
-`
-const SignUpBox = styled.div`
-`
-const SerchBox = styled.div`
-
-`
+const LoginBox = styled.div``
+const SignUpBox = styled.div``
+const SerchBox = styled.div``
 
 
 
@@ -95,16 +87,18 @@ function Topnav() {
           </MenuBox>
           <Member>
             <LoginBox><Link to="login">
-              <Login size={30} />
+              <p><Login size={30} /></p>
               로그인
               </Link>
             </LoginBox>
             <SignUpBox>
-              <PersonAdd size={30} />
-              <Link to="/join" > 회원가입</Link>
+              <Link to="/join" > 
+                <p><PersonAdd size={30} /></p>
+                회원가입
+              </Link>
             </SignUpBox>
             <SerchBox>
-              <Search size={30} />
+              <p><Search size={30} /></p>
               검색
             </SerchBox>
           </Member>
