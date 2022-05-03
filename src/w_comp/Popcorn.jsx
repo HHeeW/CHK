@@ -7,8 +7,8 @@ const popcorn = () => {
   return (
     <>
       <div className="w_s-p">
-        <div className="w_box">
-          <img className="w_pop"src="w_images/l_popcorn.jpg" alt='popcorn'/>
+        <div className="w_box ">
+          <img className="w_pop "src="w_images/l_popcorn.jpg" alt='popcorn'/>
           <p>고소한 팝콘 (Large)</p>
           <p>4,000 원 <i class="fa-solid fa-minus"></i> 4000kcal</p> 
         </div>
