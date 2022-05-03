@@ -278,16 +278,16 @@ if(tae !== 0){
 
             <div className='k-box3-right'>
                 <Swiper slidesPerView={7} spaceBetween={60} freeMode={true} pagination={{ clickable: true, }}
-                    modules={[FreeMode, Pagination]} className="mySwiper">
-                    <SwiperSlide>1 &nbsp; 월</SwiperSlide>
-                    <SwiperSlide>2 &nbsp; 화</SwiperSlide>
-                    <SwiperSlide>3 &nbsp; 수</SwiperSlide>
-                    <SwiperSlide>4 &nbsp; 목</SwiperSlide>
-                    <SwiperSlide>5 &nbsp; 금</SwiperSlide>
-                    <SwiperSlide>6 &nbsp; 토</SwiperSlide>
-                    <SwiperSlide>7 &nbsp; 일</SwiperSlide>
-                    <SwiperSlide>8 &nbsp; 월</SwiperSlide>
-                    <SwiperSlide>9 &nbsp; 화</SwiperSlide>
+                    modules={[FreeMode, Pagination]} className="mySwiper k-swiper">
+                    <SwiperSlide className='k-swiper-slide'>1 &nbsp; 월</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>2 &nbsp; 화</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>3 &nbsp; 수</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>4 &nbsp; 목</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>5 &nbsp; 금</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>6 &nbsp; 토</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>7 &nbsp; 일</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>8 &nbsp; 월</SwiperSlide>
+                    <SwiperSlide className='k-swiper-slide'>9 &nbsp; 화</SwiperSlide>
                 </Swiper>
             </div>
         </div>
