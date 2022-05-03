@@ -48,9 +48,7 @@ function List(props){
         <List img={imgi}/>
    
             
-     <div className='b_more'>
-        <p>더보기</p>
-     </div>
+ 
    
      
    

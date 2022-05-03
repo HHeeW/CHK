@@ -205,7 +205,6 @@
     height: 150px;
     border: 1px solid red;
 }
-
 .k-mySwiper{
     padding: 25px;
 }
@@ -239,12 +238,26 @@
     animation-name: example;
     animation-duration: 2s;
 }
+.k-swiper {
+    width: 100%;
+    height: 100%;
+}
+  .k-swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+  }
 
 @keyframes example {
     from {width: 0px;}
     to {width: 600px;}
 }
-.ii{
+.k-ii{
     color: blue;
     width: 20px;
     text-align: center;

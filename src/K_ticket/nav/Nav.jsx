@@ -331,11 +331,11 @@ content4 = <List6></List6>
             <div className='k-box3-middle'>
                 <Swiper slidesPerView={7} spaceBetween={60} freeMode={true} pagination={{ clickable: true, }}
                     className="k-mySwiper">
-                    <SwiperSlide><div className='ii' id='1' onClick={datecheck} style={{ backgroundColor : datediplay }}>1</div><br />
+                    <SwiperSlide><div className='k-ii' id='1' onClick={datecheck} style={{ backgroundColor : datediplay }}>1</div><br />
                     <div id='1' onClick={datecheck}>일</div></SwiperSlide>
-                    <SwiperSlide><div className='ii' id='2' onClick={datecheck}>2</div><br />
+                    <SwiperSlide><div className='k-ii' id='2' onClick={datecheck}>2</div><br />
                     <div id='2' onClick={datecheck}>월</div></SwiperSlide>
-                    <SwiperSlide><div className='ii' id='3'>3</div><br />
+                    <SwiperSlide><div className='k-ii' id='3'>3</div><br />
                     <div>수</div></SwiperSlide>
                     <SwiperSlide><div>4</div><br />
                     <div>목</div></SwiperSlide>

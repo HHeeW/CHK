@@ -1,17 +1,15 @@
 const List_Detail = () => {
     const movies_detail = [
-        {poster:"H_images/85715_320.jpg" , title:"닥터 스트레인지: 대혼돈의 멀티버스", entitle: "Doctor Strange in the Multiverse of Madness", dir:"샘 레이미", act:"베네딕트 컴버배치 ,  엘리자베스 올슨 ,  베네딕트 웡 ,  레이첼 맥아담스 ,  치웨텔 에지오포 ,  소치틀 고메즈", grn: " 액션, 어드벤처, 환타지", bas:"126분, 미국", age:"H_12", ticketing:"9.3%", open:"2022.05.04", link:"Rt_UqUm38BI",
+        {poster:"H_images/85715_320.jpg" , title:"닥터 스트레인지: 대혼돈의 멀티버스", entitle: "Doctor Strange in the Multiverse of Madness", dir:"샘 레이미", act:"베네딕트 컴버배치 ,  엘리자베스 올슨 ,  베네딕트 웡 ,  레이첼 맥아담스 ,  치웨텔 에지오포 ,  소치틀 고메즈", gen: " 액션, 어드벤처, 환타지", bas:"126분, 미국", age:"H_12", ticketing:"9.3%", open:"2022.05.04", link:"Rt_UqUm38BI",
         detail_title:`지금껏 본 적 없는 마블의 극한 상상력!
         
         5월, 광기의 멀티버스가 깨어난다!`,
         detail:`끝없이 균열되는 차원과 뒤엉킨 시공간의 멀티버스가 열리며
         오랜 동료들, 그리고 차원을 넘어 들어온 새로운 존재들을 맞닥뜨리게 된 ‘닥터 스트레인지’.
-        대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….`,
-        slider1:"d-1", slider2:"d-2", slider3:"d-3", slider4:"d-4", slider5:"d-5"},
-        
+        대혼돈 속, 그는 예상치 못한 극한의 적과 맞서 싸워야만 하는데….`, 
+        slider1:"d1", slider2:"d2", slider3:"d3", slider4:"d4", slider5:"d5", slider6:"d6"},
       
        {poster:"H_images/39614_1000.jpg" , title:"해리포터와 죽음의 성물 2", entitle: "Harry Potter And The Deathly Hallows: Part2",  dir:"데이빗 예이츠", act:"다니엘 래드클리프 ,  엠마 왓슨 ,  루퍼트 그린트", gen:"환타지, 어드벤처", bas:" 131분, 미국, 영국", age:"H_all", ticketing:"9.0%", open:"2011.07. 14", link:"_31zwi0U8NE",
-       slider:"h-1", slider:"h-2", slider:"h-3", slider:"h-4", slider:"h-5", slider:"h-6",
        detail_title:`가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!`,
        detail: `1930년대, 제2차 세계대전에 마법사들이 개입하게 되면서
         강력한 어둠의 마법사 그린델왈드의 힘이 급속도로 커진다.
@@ -23,7 +21,8 @@ const List_Detail = () => {
         그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다.
       
         한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는
-        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`}, 
+        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`,
+        slider1:"h1", slider2:"h2", slider3:"h3", slider4:"h4", slider5:"h5", slider6:"h6"}, 
       
        {poster:"H_images/85712_320.jpg" , title:"신비한 동물들과 덤블도어의 비밀", entitle:"Fantastic Beasts: The Secrets of Dumbledore", dir:"데이빗 예이츠", act:"에디 레드메인 ,  주드 로 ,  매즈 미켈슨 ,  댄 포글러 ,  앨리슨 수돌 ,  에즈라 밀러 ,  칼럼 터너 ,  제시카 윌리엄스 ,  빅토리아 예이츠 ,  윌리엄 나딜람 ,  리처드 코일", gen:"어드벤처, 가족, 환타지", bas:"142분, 미국", age:"H_12", ticketing:"8.5%", open:"2022.04.14", link:"DGhq0Kx8dzQ",
         detail_title:`가장 위험한 마법에 맞선, 세상을 구할 전쟁이 시작된다!`,
@@ -37,7 +36,8 @@ const List_Detail = () => {
         그린델왈드와 추종자들, 그의 위험한 신비한 동물들에 맞서 세상을 구할 거대한 전쟁에 나선다.
         
         한편 전쟁의 위기가 최고조로 달한 상황 속에서 덤블도어는
-        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`},
+        더 이상 방관자로 머물 수 없는 순간을 맞이하고, 서서히 숨겨진 비밀이 드러나는데…`,
+        slider1:"f1", slider2:"f2", slider3:"f3", slider4:"f4", slider5:"f5", slider6:"f6"},
        
        {poster:"H_images/85641_1000.jpg" , title:"해리 포터와 불사조 기사단", entitle:"Harry Potter And The Order Of The Phoenix", dir:"데이빗 예이츠", act:"다니엘 래드클리프 ,  엠마 왓슨 ,  루퍼트 그린트", gen:"환타지, 액션, 어드벤처", bas:"137분, 미국, 영국", age:"H_all", ticketing:"7.6%", open:"2007.7.12", link:"y6ZW7KXaXYk",
        detail_title: `호그와트 최대 위기! 볼드모트 그가 돌아왔다!
@@ -54,7 +54,8 @@ const List_Detail = () => {
        그 와중에 해리는 소중한 사람의 죽음까지 맞이하는 아픔을 겪게 되는데…
        
        위기에 빠진 호그와트!
-       해리포터와 불사조 기사단, 모든 것이 그들 손에 달렸다!!` },
+       해리포터와 불사조 기사단, 모든 것이 그들 손에 달렸다!!`,
+       slider1:"hp1", slider2:"hp2", slider3:"hp3", slider4:"hp4", slider5:"hp5", slider6:"hp6"},
        
        {poster:"H_images/76791_1000.jpg" , title:"신세계", entitle:"New World", dir:"박훈정", act:"이정재 ,  황정민 ,  최민식 ,  박성웅 ,  송지효", gen:"범죄, 액션", bas:"134분, 한국",  age:"H_19", ticketing:"7.1%", open:"2013.2.21", link: "rvLMVcRkRfY",
        detail_title:`너, 나하고 일 하나 같이 하자`,
@@ -66,15 +67,18 @@ const List_Detail = () => {
        
        약속 했잖습니까... 이번엔 진짜 끝이라고
        
-       한편, 작전의 성공만 생각하는 강과장(최민식)은 계속해서 자성(이정재)의 목을 조여만 간다. 시시각각 신분이 노출될 위기에 처한 자성(이정재)은 언제 자신을 배신할 지 모르는 경찰과, 형제의 의리로 대하는 정청(황정민) 사이에서 갈등하게 되는데…` },
+       한편, 작전의 성공만 생각하는 강과장(최민식)은 계속해서 자성(이정재)의 목을 조여만 간다. 시시각각 신분이 노출될 위기에 처한 자성(이정재)은 언제 자신을 배신할 지 모르는 경찰과, 형제의 의리로 대하는 정청(황정민) 사이에서 갈등하게 되는데…`,
+       slider1:"nw1", slider2:"nw2", slider3:"nw3", slider4:"nw4", slider5:"nw5", slider6:"nw6"},
        
        {poster:"H_images/80810_1000.jpg" , title:"신과함께 인과연", entitle:"Along with the Gods: The Last 49 Days", dir:"김용화", act:"하정우 ,  주지훈 ,  김향기 ,  마동석 ,  김동욱 ,  이정재", gen:"환타지, 드라마", bas:"141분, 한국",  age:"H_12", ticketing:"7.0%", open:"2018.08.01", link:"amXcMw8cJZk",
        detail_title:`환생이 약속된 마지막 49번째 재판을 앞둔 저승 삼차사`,
        detail: `그들의 천 년 전 과거를 기억하는 성주신을 만나이승과 저승,
-       과거를 넘나들며 잃어버린 비밀의 연을 찾아가는 이야기.` },
+       과거를 넘나들며 잃어버린 비밀의 연을 찾아가는 이야기.` ,
+       slider1:"ag1", slider2:"ag2", slider3:"ag3", slider4:"ag4", slider5:"ag5", slider6:"ag6"},
        
        {poster:"H_images/12375_1000.jpg" , title:"타짜", entitle:"The War Of Flower", dir:"최동훈", act:"조승우 ,  백윤식 ,  김혜수 ,  유해진", gen:"드라마", bas:"139분, 한국", age:"H_19", ticketing:"6.9%", open:"2006.09.28", link:"vLHyh8F-vQo",
-       detail_title: `인생을 예술로 살기 위해 화투판에 모든 것을 건 도박꾼들의 욕망을 아는가.` },
+       detail_title: `인생을 예술로 살기 위해 화투판에 모든 것을 건 도박꾼들의 욕망을 아는가.` ,
+       slider1:"wf1", slider2:"wf2", slider3:"wf3", slider4:"wf4", slider5:"wf5", slider6:"wf6"},
        
        
        
@@ -84,7 +88,8 @@ const List_Detail = () => {
 
        모든 것을 얼려버리는 신비로운 힘이 바로 그것.
        
-       ‘엘사’는 통제할 수 없는 자신의 힘이 두려워 왕국을 떠나고, 얼어버린 왕국의 저주를 풀기 위해 ‘안나’는 언니를 찾아 환상적인 여정을 떠나는데…` },
+       ‘엘사’는 통제할 수 없는 자신의 힘이 두려워 왕국을 떠나고, 얼어버린 왕국의 저주를 풀기 위해 ‘안나’는 언니를 찾아 환상적인 여정을 떠나는데…`,
+       slider1:"fz1", slider2:"fz2", slider3:"fz3", slider4:"fz4", slider5:"fz5", slider6:"fz6" },
        
        {poster:"H_images/78529_1000.jpg" , title:"내부자들", entitle:"Inside Men", dir:"우민호", act:"조승우 ,  이병헌 ,  백윤식", gen:"범죄, 드라마", bas:"130분, 한국", age:"H_19", ticketing:"6.5%", open:"2015.12.31", link:"miXzN6spmFQ",
        detail_title:`“복수극으로 가자고, 화끈하게”`,
@@ -96,7 +101,8 @@ const List_Detail = () => {
        
        이 일로 폐인이 되어 버려진다.
        
-       과연 살아남는 자는 누가 될 것인가?` },
+       과연 살아남는 자는 누가 될 것인가?` ,
+       slider1:"im1", slider2:"im2", slider3:"im3", slider4:"im4", slider5:"im5", slider6:"im6"},
 
        { poster:"H_images/81907_1000.jpg" , title:"토이 스토리 4", entitle:"Toy Story 4", dir:"조시 쿨리", act:"톰 행크스 ,  키아누 리브스 ,  팀 알렌 ,  애니 파츠 ,  조안 쿠삭 ,  토니 헤일", gen:"", bas:"애니메이션", age:"H_all", ticketing:"5.6%", open:"2019.06.20", link:"yO7RbAq9uV4",
        detail_title:`우리의 여행은 아직 끝나지 않았다!`,
@@ -105,7 +111,8 @@ const List_Detail = () => {
 
        한편, ‘버즈’와 친구들은 사라진 ‘우디’와 ‘포키’를 찾아 세상 밖 위험천만한 모험을 떠나게 되는데… 
        
-       당신이 기다려온 그들의 진짜 이야기가 공개된다!` },
+       당신이 기다려온 그들의 진짜 이야기가 공개된다!` ,
+       slider1:"ts1", slider2:"ts2", slider3:"ts3", slider4:"ts4", slider5:"ts5", slider6:"ts6"},
        
        { poster:"H_images/79139_1620.jpg" , title:"심슨가족더무비", entitle:"The Simpsons Movie", dir:"데이빗 실버맨", act:"줄리 카브너 ,  댄 카스텔라네타", gen:"애니메이션", bas:"86분, 미국", age:"H_12", ticketing:"5.2%", open:"2007.08.22",link:"XPG0MqIcby8",
        detail_title:`싹수 노란(?!) 심슨 가족의 초절정 코믹 본색!`,
@@ -119,7 +126,8 @@ const List_Detail = () => {
        
        언제나 고무 젖꼭지를 입에 물고 대사는 한마디도 하지 않지만 활약에 있어서는 절대 빠지지 않는 막내 매기. 
        
-       어디 한곳 제대로 된 구석이 없지만, 이들의 좌충우돌 라이프스토리는 전세계 수십억 인구를 사로잡았다.` },
+       어디 한곳 제대로 된 구석이 없지만, 이들의 좌충우돌 라이프스토리는 전세계 수십억 인구를 사로잡았다.` ,
+       slider1:"sm1", slider2:"sm2", slider3:"sm3", slider4:"sm4", slider5:"sm5", slider6:"sm6"},
        
        { poster:"H_images/79139_1000.jpg" , title:"아수라", entitle:"Asura : The City of Madness", dir:"김성수", act:"정우성 ,  황정민 ,  주지훈 ,  곽도원 ,  정만식 ,  차래형", gen:"액션, 범죄", bas:"132분, 한국", age:"H_19", ticketing:"5.2%", open:"2016.09.28", link:"CuJriB-ZvQQ",
        detail_title:`지옥 같은 세상, 살아남기 위해 싸우는 악인들의 전쟁
@@ -134,9 +142,10 @@ const List_Detail = () => {
        
        그 사이 태풍의 눈처럼 되어 버린 한도경은, 자신을 친형처럼 따르는 후배 형사 문선모(주지훈)를 박성배의 수하로 들여보내고,
        
-       살아남기 위해 혈안이 된 나쁜 놈들 사이에서 서로 물지 않으면 물리는 지옥도가 펼쳐진다.` },
+       살아남기 위해 혈안이 된 나쁜 놈들 사이에서 서로 물지 않으면 물리는 지옥도가 펼쳐진다.` ,
+       slider1:"ac1", slider2:"ac2", slider3:"ac3", slider4:"ac4", slider5:"ac5", slider6:"ac6"},
        
-       { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-and-Run Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
+       { poster:"H_images/81561_1000.jpg" , title:"뺑반", entitle:"Hit-andRun Squad", dir:"한준희", act:"공효진 ,  류준열 ,  조정석 ,  차래형", gen:"액션, 범죄", bas:"133분, 한국", age:"H_15", ticketing:"5.0%", open:"2019.01.30",link:"1-o3P-IqYBo",
        detail_title:`Hit and Run 상황 발생,
        순마 출동합니다!`,
        detail: `경찰 내 최고 엘리트 조직 내사과 소속 경위 ‘은시연’(공효진). 
@@ -152,7 +161,8 @@ const List_Detail = () => {
        뺑소니 친 놈은 끝까지 쫓는 뺑반 에이스 민재와 
        온갖 비리를 일삼는 재철을 잡기 위해 모든 것을 건 시연. 
        하나의 목표를 향해 힘을 합친 그들의 팀플레이가 시작되는 가운데 
-       방법을 가리지 않고 수사망을 빠져 나가려는 통제불능 스피드광 재철의 반격 역시 점점 과감해지는데…!` },
+       방법을 가리지 않고 수사망을 빠져 나가려는 통제불능 스피드광 재철의 반격 역시 점점 과감해지는데…!` ,
+       slider1:"hr1", slider2:"hr2", slider3:"hr3", slider4:"hr4", slider5:"hr5", slider6:"hr6"},
        
        { poster:"H_images/80843_1000.jpg" , title:"극장판 짱구는 못말려-격돌! 낙서왕국과 얼추 네 명의 용사들", entitle:"Crayon Shin-chan: Crash! Scribble Kingdom and Almost Four Heroes", dir:"쿄고쿠 타카히코", act:"박영남 ,  김환진 ,  강희선 ,  여민정 ,  정유미 ,  강새봄 ,  정혜옥 ,  시영준", gen:"애니메이션", bas:" 103분, 일본", age:"H_all", ticketing:"4.2%", open:"2021.09.15", link:"zacog_tHX_g",
        detail_title:`아이들의 낙서가 사라져 붕괴 위기에 처한 낙서왕국은 
@@ -165,7 +175,8 @@ const List_Detail = () => {
         부리부리 용사가 스케치북 밖으로 튀어나오는데..!
        
        과연, 크레용 용사 짱구는 낙서 용사들과 함께
-       위험에 빠진 떡잎마을과 세계를 구할 수 있을까?!` },
+       위험에 빠진 떡잎마을과 세계를 구할 수 있을까?!` ,
+       slider1:"cs1", slider2:"cs2", slider3:"cs3", slider4:"cs4", slider5:"cs5", slider6:"cs6"},
        
        { poster:"H_images/85603_320.jpg" , title:"극장판 주술회전 0", entitle:"Jujutsu Kaisen: Zero", dir:"박성후", act:"오가타 메구미 ,  하나자와 카나 ,  코마츠 미카코 ,  우치야마 코우키 ,  세키 토모카즈 ,  나카무라 유이치 ,  사쿠라이 타카히로", gen:"애니메이션", bas:"105분, 일본",age:"H_15", ticketing:"2.1%", open:"2022.02.17", link:"zl7-l_UuAKA",
        detail_title:`어릴 적 소꿉친구인 오리모토 리카를 교통사고로 눈앞에서 잃은 옷코츠 유타.`,
@@ -177,13 +188,15 @@ const List_Detail = () => {
        한편, 옷코츠와 친구들 앞에 과거에 일반인을 대량으로 학살해서 고전에서 추방된 최악의 주저사인 게토 스구루가 나타난다.
        
        “12월 24일, 우리는 백귀야행을 결행한다”
-       주술사만의 낙원을 만들려는 게토는 비술사를 섬멸하겠다면서, 신주쿠와 교토에 천의 저주를 내리는데…과연 옷코츠는 게토를 막을 수 있을까? 그리고리카의 저주를 풀 수 있을까?` },
+       주술사만의 낙원을 만들려는 게토는 비술사를 섬멸하겠다면서, 신주쿠와 교토에 천의 저주를 내리는데…과연 옷코츠는 게토를 막을 수 있을까? 그리고리카의 저주를 풀 수 있을까?` ,
+       slider1:"jk1", slider2:"jk2", slider3:"jk3", slider4:"jk4", slider5:"jk5", slider6:"jk6"},
        
        { poster:"H_images/85780_320.jpg" , title:"공기살인", entitle:"Murder in the Air", dir:"조용선", act:"김상경 ,  이선빈 ,  윤경호 ,  서영희", gen:"드라마", bas:"108분, 한국", age:"H_12", ticketing:"1.7%", open:"2022.04.22", link: "GZx8vBNEU4M",
        detail_title: `“알고 있었죠, 사람이 죽을 수도 있다는 거”`,
        detail: `봄이 되면 나타났다 여름이 되면 사라지는 죽음의 병.
        공기를 타고 대한민국에 죽음을 몰고 온 살인무기의 실체를 밝히기 위한 그들의 사투.
-       증발된 범인, 피해자는 증발되지 않았다!` },
+       증발된 범인, 피해자는 증발되지 않았다!` ,
+       slider1:"ma1", slider2:"ma2", slider3:"ma3", slider4:"ma4", slider5:"ma5", slider6:"ma6"},
        
        { poster:"H_images/85772_320.jpg" , title:"앵커", entitle:"Anchor", dir:"정지연", act:"천우희, 신하균, 이혜영, 박지현", gen:"스릴러", bas:"111분, 한국", age:"H_15", ticketing:"1.1%", open:"2022.04.20", link:"TWaxKOd3vo4",
        detail_title:`“제 죽음이 정세라 앵커의 입을 통해 보도되면 너무 기쁠 것 같아요”`,
@@ -198,7 +211,8 @@ const List_Detail = () => {
        사건 현장에서 미소의 주치의였던 정신과 의사 ‘인호’(신하균)를 마주하게 되며
        그에 대한 ‘세라’의 의심 또한 깊어지는데…
        
-       완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라! ` },
+       완벽했던 앵커를 뒤흔들 충격적인 진실을 확인하라! ` ,
+       slider1:"an1", slider2:"an2", slider3:"an3", slider4:"an4", slider5:"an5", slider6:"an6"},
        
        { poster:"H_images/85781_320.jpg" , title:"극장판 귀멸의 칼날-무한열차편 ", entitle:"Demon Slayer: Kimetsu no Yaiba the Movie - Mugen Train", dir:"소토자키 하루오", act:"이경태 ,  김연우 ,  김지율 ,  이호산 ,  장민혁 ,  김현욱 ,  전태열", gen:"애니메이션", bas:"117분, 일본", age:"H_15", ticketing:"0.8%", open:"2022.04.21", link: "5EXgtz_seFA",
        detail_title:`혈귀로 변한 여동생 ‘네즈코’를 되돌리기 위해 귀살대가 된 ‘탄지로’!`,
@@ -209,7 +223,8 @@ const List_Detail = () => {
        이들은 무한열차에 숨어 있는 혈귀의 존재를 직감하고
        모두를 구하기 위해 목숨을 건 혈전을 시작하는데…
        
-       그 칼로 악몽을 끊어라!` },
+       그 칼로 악몽을 끊어라!` ,
+       slider1:"ds1", slider2:"ds2", slider3:"ds3", slider4:"ds4", slider5:"ds5", slider6:"ds6"},
        
        { poster:"H_images/85728_320.jpg" , title:"수퍼 소닉2", entitle:"Sonic the Hedgehog 2", dir:"제프 파울러", act:"제임스 마스던 ,  짐 캐리 ,  벤 슈와츠 ,  이드리스 엘바 ,  티카 섬터 ,  콜린 오슐그네시", gen:"SF, 애니메이션, 액션, 어드벤처, 코미디, 판타지", bas:"122분, 미국, 캐나다", age:"H_all", ticketing:"0.5%", open:"2022.04.06", link:"WTR5snCDDes",
        detail_title:`레벨 업! 초특급 히어로 소닉의 새로운 시대가 열린다`,
@@ -219,7 +234,8 @@ const List_Detail = () => {
        최강 파워로 업그레이드된 ‘로보트닉’과 강력한 펀치 파워 ‘너클즈’의 공격에 속수무책으로 당하던 ‘소닉’은 하늘을 나는 꼬리를 가진 귀여운 파트너 ‘테일즈’의 도움으로 위기를 모면하게 되는데…
         
        초특급 히어로 소닉과 테일즈 VS 너클즈와 천재 악당 로보트닉
-       새로운 질서로 세계를 정복하려는 최강 빌런에 맞선 거대한 대결이 시작된다` },
+       새로운 질서로 세계를 정복하려는 최강 빌런에 맞선 거대한 대결이 시작된다` ,
+       slider1:"sh1", slider2:"sh2", slider3:"sh3", slider4:"sh4", slider5:"sh5", slider6:"sh6"},
 
        { poster:"H_images/18540_201_1.jpg" , title:"모비우스", entitle:"Morbius", dir:"다니엘 에스피노사", act:"자레드 레토, 맷 스미스, 아드리아 아르호나, 자레드 해리스, 타이레스 깁슨", gen:"드라마, 액션, 어드벤처", bas:"104분, 미국",                      age:"H_15", ticketing:"0.1%", open:"2022.03.30", link:"9Z79vlm3zW8",
        detail_title:`구원자인가, 파괴자인가`,
@@ -234,7 +250,8 @@ const List_Detail = () => {
        ‘모비우스’와 같은 힘을 얻게 되는데…
        
        세상을 구할 능력, 파괴할 본능!
-       2022년, 마블 최강의 안티 히어로가 탄생한다!` }
+       2022년, 마블 최강의 안티 히어로가 탄생한다!` ,
+       slider1:"mo1", slider2:"mo2", slider3:"mo3", slider4:"mo4", slider5:"mo5", slider6:"mo6"}
         ]
   return movies_detail
 }

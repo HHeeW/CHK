@@ -17,7 +17,7 @@ const GiftShop = () => {
         };
   return (
     <>
-    <TopBar />
+    // <TopBar />
     <div className="w_s-n">
         <h2><i class="fa-solid fa-circle"></i> gift - shop </h2>
           <div className="w_movie-shop">
@@ -31,10 +31,10 @@ const GiftShop = () => {
             
             
             <div className="w_merchlist_box ">
-              <img src="w_images/doctor/marvel_airpot.jpg"></img>
+              <img src="w_images/doctor/marvel_airpot.jpg" alt='marvel_airpot'></img>
               <p>마블 에어팟 케이스</p>
               <h4>32,000 원</h4>
-              <h6>평점 4.1 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 561</h6>
+              <h6>평점 4.1 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 524</h6>
             
               <div className="w_list-click">
                 <button><i class="fa-solid fa-cart-shopping"></i></button>
@@ -47,7 +47,7 @@ const GiftShop = () => {
 
 
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_cup.jpg"></img>
+              <img src="w_images/doctor/marvel_cup.jpg" alt='marvel_cup'></img>
               <p>마블 컵</p>
               <h4>18,000 원</h4>
               <h6>평점 4.5 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 357</h6>
@@ -55,12 +55,12 @@ const GiftShop = () => {
               <div className="w_list-click">
                 <button><i class="fa-solid fa-cart-shopping"></i></button>
                 <button><i class="fa-solid fa-gift"></i></button>
-                <button><i class="fa-solid fa-heart"></i></button>
+                <button className='w_heart'><i class="fa-solid fa-heart"></i></button>
               </div>
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_figure.jpg"></img>
+              <img src="w_images/doctor/marvel_figure.jpg" alt='marvel_figure'></img>
               <p>마블 피규어 set</p>
               <h4>48,000 원</h4>
               <h6>평점 4.7 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 235</h6>
@@ -73,7 +73,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_tumbler.jpg"></img>
+              <img src="w_images/doctor/marvel_tumbler.jpg" alt='marvel_tumbler'></img>
               <p>마블 텀블러 <i class="fa-brands fa-hotjar"></i></p>
               <h4>35,000 원</h4>
               <h6>평점 4.3 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 76</h6>
@@ -86,7 +86,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_watch.jpg"></img>
+              <img src="w_images/doctor/marvel_watch.jpg" alt='marvel_watch'></img>
               <p>마블 탁장시계</p>
               <h4>23,000 원</h4>
               <h6>평점 2.7 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 247</h6>
@@ -98,7 +98,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_clothes.jpg"></img>
+              <img src="w_images/doctor/marvel_clothes.jpg" alt='marvel_clothes'></img>
               <p>닥터스트레인지 맨투맨</p>
               <h4>47,000 원</h4>
               <h6>평점 3.9 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 566</h6>
@@ -110,7 +110,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_cushion.jpg"></img>
+              <img src="w_images/doctor/marvel_cushion.jpg" alt='marvel_cushion'></img>
               <p>닥터스트레인지 쿠션</p>
               <h4>31,000 원</h4>
               <h6>평점 4.8 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 159</h6>
@@ -122,7 +122,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/doctor/marvel_hiddenbox.jpg"></img>
+              <img src="w_images/doctor/marvel_hiddenbox.jpg" alt='marvel_hiddenbox'></img>
               <p>닥터스트레인지 랜덤 박스 <i class="fa-brands fa-hotjar"></i></p>
               <h4>77,000 원</h4>
               <h6>평점 4.8 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 777</h6>
@@ -145,7 +145,7 @@ const GiftShop = () => {
         <div className="w_merchlist">
           <Slider {...settings}>
             <div className="w_merchlist_box">
-              <img src="w_images/harry/harry_note.jpg"></img>
+              <img src="w_images/harry/harry_note.jpg" alt='harry_note'></img>
               <p>해리포터 노트</p>
               <h4>12,000 원</h4>
               <h6>평점 3.9 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 955</h6>
@@ -158,7 +158,7 @@ const GiftShop = () => {
             
             </div>
             <div className="w_merchlist_box">
-              <img src="w_images/harry/harry_magmatic.jpg"></img>
+              <img src="w_images/harry/harry_magmatic.jpg" alt='harry_magmatic'></img>
               <p>해리포터 마그마틱</p>
               <h4>3,000 원</h4>
               <h6>평점 4.0 <i class="fa-solid fa-minus"></i> <i class="fa-solid fa-heart"></i> 654</h6>

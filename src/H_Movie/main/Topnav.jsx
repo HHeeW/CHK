@@ -27,14 +27,6 @@ const LogoBox = styled.div`
   width: 20%;
   height 100%;
 `
-const Logo = styled.img`
-  margin-left: 0;
-  width:70%;
-  height:100px;
-  background: url(H_images/logo.png) no-repeat center;
-  background-size: contain;
-  border: none;
-`
 const MenuBox = styled.div`
   height: 100%;
   width:55%;
@@ -52,30 +44,22 @@ const MovieBox = styled.li``
 const TicketBox = styled.li``
 const StoreBox = styled.li``
 const EventBox = styled.li``
-const Movie = styled.a``
-const Ticket = styled.a``
-const Store = styled.a``
-const Event = styled.a``
 
 const Member = styled.div`
   height: 100%;
-  width:25%;
+  width:20%;
   display:flex;
-  justify-content:flex-end;
+  justify-content:space-between;
   align-items: center;
   padding-right: 30px;
   cursor: pointer;
 `
-const LoginBox = styled.div`
-  display:flex;
-  justify-content:column;
-  align-items: center;
-`
+const LoginBox = styled.div``
 const SignUpBox = styled.div`
-`
-const SerchBox = styled.div`
 
+  text-align:center;
 `
+const SerchBox = styled.div``
 
 
 
@@ -85,7 +69,9 @@ function Topnav() {
       <FixBox>
         <TopNav>  
           <LogoBox>
-          <Link to={"/"}><Logo/></Link>
+          <Link to={"/"}>
+            <img src="H_images/logo.png" alt="logo"className='H_logo' />
+          </Link>
           </LogoBox>
           <MenuBox>
             <Menu>
@@ -99,16 +85,18 @@ function Topnav() {
           </MenuBox>
           <Member>
             <LoginBox><Link to="login">
-              <Login size={40} />
+              <p><Login size={30} /></p>
               로그인
               </Link>
             </LoginBox>
             <SignUpBox>
-              <PersonAdd size={40} />
-              <Link to="/join" > 회원가입</Link>
+              <Link to="/join" > 
+                <p><PersonAdd size={30} /></p>
+                회원가입
+              </Link>
             </SignUpBox>
             <SerchBox>
-              <Search size={40} />
+              <p><Search size={30} /></p>
               검색
             </SerchBox>
           </Member>

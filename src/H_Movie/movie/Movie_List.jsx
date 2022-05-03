@@ -13,6 +13,9 @@ const Movie_List = () => {
       title={movies[i].title} 
       poster={movies[i].poster} 
       age={movies[i].age} 
+      gen={movies[i].gen} 
+      dir={movies[i].dir} 
+      act={movies[i].act} 
       ticketing={movies[i].ticketing} 
       open={movies[i].open} 
       detail={movies[i].detail}/>

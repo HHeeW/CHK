@@ -22,9 +22,13 @@
 .b_listBox:hover{
     box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
     cursor: pointer;
+    transform: scale(1.09);
+    transition: all 0.7s;
 }
 
 .b_conTitle{
+    font-family:"GowunDodum-Regular";
+    font-weight: 300;
     font-size: 20px;
     line-height: 40px;
     padding-left: 5px;

@@ -61,8 +61,8 @@
     width: 100%;
 }
 .H_nav_gnb>li>button{
-    font-family: 'HoengSeong',sans-serif;
     font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     width: 100%;
     padding: 10px;

@@ -10,10 +10,14 @@
     display: inline-block;
 }
 .w_play{
-    float: right;
     display: flex;
-    font-size: 30px;
+    align-items: center;
+    font-size: 25px;
 }
+.w_play>li{
+    margin-right: 100px;
+}
+
 .w_play>li>i{
     color: #00c8c8;
 }

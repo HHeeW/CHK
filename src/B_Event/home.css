@@ -9,12 +9,13 @@
 .b_title{
     padding-bottom: 20px;
     padding-left: 5px;
-    border-bottom: 4px solid #333;
+    border-bottom: 6px double #00c9c7;
 }
 .b_nav{
     font-size: 20px;
     display: flex;
     justify-content: space-between;
+    align-items:center;
     padding-bottom: 17px;
     border-bottom: 1px solid #999;
    
@@ -76,4 +77,10 @@
    position: absolute;
    top: 0;
    left: 0;
+}
+@font-face {
+   font-family: 'GowunDodum-Regular';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
 }
