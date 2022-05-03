@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Movie from './movie/Movie'
 import Movie_Page_List from './movie_detail/Movie_Page_List'
 import {
