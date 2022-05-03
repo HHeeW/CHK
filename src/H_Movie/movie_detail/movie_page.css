@@ -62,6 +62,7 @@
 }
 .H_nav_gnb>li>button{
     font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     width: 100%;
     padding: 10px;
