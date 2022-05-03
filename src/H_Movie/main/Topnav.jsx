@@ -54,15 +54,18 @@ const EventBox = styled.li``
 
 const Member = styled.div`
   height: 100%;
-  width:25%;
+  width:20%;
   display:flex;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items: center;
   padding-right: 30px;
   cursor: pointer;
 `
 const LoginBox = styled.div``
-const SignUpBox = styled.div``
+const SignUpBox = styled.div`
+
+  text-align:center;
+`
 const SerchBox = styled.div``
 
 

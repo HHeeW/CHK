@@ -5,7 +5,7 @@
 .b_out p{
     padding-bottom: 20px;
     border-bottom: 1px solid #888;
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 10px;
 }
 
@@ -14,7 +14,8 @@
     padding: 0;
     margin: 0;
     padding-left: 10px;
-    font-family: "GowunDodum-Regular";
+    font-weight: 500;
+  
 }
 .b_outList li{
     line-height: 80px;
@@ -31,7 +32,7 @@
     font-weight: bold;
 }
 .b_pageNum{
-    font-family: "GowunDodum-Regular";
+    font-weight: 500;
     justify-content: space-around; 
     width: 300px;
     height: 200px;
