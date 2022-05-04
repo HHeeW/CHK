@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import { Login, PersonAdd, Search } from '@styled-icons/material'
+import { Login, PersonAdd } from '@styled-icons/material'
 import { Link } from 'react-router-dom';
-
+import Movie_Search from'./Movie_Search';
 // CSS
 const Header = styled.div`
-  height: 100px;
+  height: 90px;
 `
 const FixBox = styled.div`
   position: fixed;
@@ -15,10 +15,10 @@ const FixBox = styled.div`
   background-color: #fff;
 `
 const TopNav = styled.div`
-  margin: 0 auto;
+  margin: 10px auto 0px;
   padding : 0;
   width: 1200px;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,17 +51,23 @@ const Member = styled.div`
   display:flex;
   justify-content:space-between;
   align-items: center;
-  padding-right: 30px;
+  flex-direction: column;
+  padding:10px 0px;
+  position:relative;
+`
+const LoginBox = styled.div`
   cursor: pointer;
 `
-const LoginBox = styled.div``
 const SignUpBox = styled.div`
-
+  cursor: pointer;
   text-align:center;
 `
-const SerchBox = styled.div``
-
-
+const Flex_SB = styled.div`
+  width:100%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+`
 
 function Topnav() {
   return (
@@ -84,21 +90,22 @@ function Topnav() {
             </Menu>
           </MenuBox>
           <Member>
-            <LoginBox><Link to="login">
-              <p><Login size={30} /></p>
-              로그인
-              </Link>
-            </LoginBox>
-            <SignUpBox>
-              <Link to="/join" > 
-                <p><PersonAdd size={30} /></p>
-                회원가입
-              </Link>
-            </SignUpBox>
-            <SerchBox>
-              <p><Search size={30} /></p>
-              검색
-            </SerchBox>
+            <Flex_SB>
+              <LoginBox><Link to="login">
+                <Login size={30} />
+                로그인
+                </Link>
+              </LoginBox>
+              <SignUpBox>
+                <Link to="/join" > 
+                  <PersonAdd size={30} />
+                  회원가입
+                </Link>
+              </SignUpBox>
+            </Flex_SB>
+            <Flex_SB>
+              <Movie_Search />
+            </Flex_SB>
           </Member>
         </TopNav>
       </FixBox>
