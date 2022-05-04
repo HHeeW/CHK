@@ -8,9 +8,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Main from '../B_Event/main/Main';
 
 function App() {
   return (
+    <>
+    {/* <Main/> */}
+    
         <Routes>
             <Route path="/preview" element={<Preview/>}/>
             <Route path="/reserve" element={<Reserve/>} />
@@ -19,6 +23,7 @@ function App() {
             <Route path="/timeout" element={<Timeout />} /> 
             <Route path="/join" element={<Join />} />
       </Routes> 
+      </>
   );
 }
 export default App;
