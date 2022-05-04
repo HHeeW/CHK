@@ -5,7 +5,7 @@ const FixBar = () => {
 
   return (
     <div className="w_fixbar">
-        <div className="get">
+        <div className="w_get">
             <p>장 바 구 니</p>
         </div>
         
