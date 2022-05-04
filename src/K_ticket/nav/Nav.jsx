@@ -51,7 +51,20 @@ export default function Nav() {
         {id: 1, title: '강서구'},
         {id: 2, title: '송파구'},
         {id: 3, title: '강남구'},
-        {id: 4, title: '동작구'}
+        {id: 4, title: '동작구'},
+        {id: 5, title: '마포구'},
+        {id: 6, title: '서대문구'},
+        {id: 7, title: '은평구'},
+        {id: 8, title: '중랑구'},
+        {id: 9, title: '노원구'},
+        {id: 10, title: '종로구'},
+        {id: 11, title: '도봉구'},
+        {id: 12, title: '금천구'},
+        {id: 13, title: '구로구'},
+        {id: 14, title: '관악구'},
+        {id: 15, title: '동대문구'},
+        {id: 16, title: '영등포구'}
+        
     ];
     const arr3 = [ // 객체가 3개라 slide 일반 청소년 우대랑 같이 씀
         {id: 1, title: '풍무', name: '일반'},
@@ -504,6 +517,9 @@ content6 = <List8 arr={arr5}></List8> // 인원/좌석 선택에서 좌석 반�
                 <div className='k-box2-bottom-leftbox'>
                     <div id='1' className='k-bar4' onClick={city} style={{backgroundColor: color2[0]}}>서울</div>
                     <div id='2' className='k-bar4' onClick={city} style={{backgroundColor: color2[1]}}>김포</div>
+                    <div id='3' className='k-bar4' onClick={city} style={{backgroundColor: color2[2]}}>인천</div>
+                    <div id='4' className='k-bar4' onClick={city} style={{backgroundColor: color2[3]}}>강원도</div>
+                    <div id='5' className='k-bar4' onClick={city} style={{backgroundColor: color2[3]}}>3조 홧팅!!</div>
                 </div>
                 <div className='k-box2-bottom-rightbox'>
                     {content2}
