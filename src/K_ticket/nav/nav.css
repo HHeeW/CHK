@@ -229,25 +229,25 @@
     box-shadow: 2px 2px;
     cursor: pointer;
 }
+.k-box3-datebox:active{
+    background-color: goldenrod;
+}
 .k-box3-datebox div{
     text-align: center;
 }
 /* 슬라이드 좌석선택 스타일 */
 .k-slidebox{
-    width: 800px;
-    height: 800px;
     position: fixed;
     z-index: 200;
     background-color: rgba(5, 0, 0, 0.5);
     right: 0;
-    transform: translateX(-350px);
-    animation-name: example;
+    transform: translateX(-640px);
+    animation: example;
     animation-duration: 1s;
 }
 .k-slidebox-container{
     width: 800px;
-    height: 800px;
-    border: 1px solid black;
+    height: 600px;
     background-color: green;
 }
 .k-slidebox-top{
@@ -258,12 +258,11 @@
 .k-slidebox-middle{
     display: flex;
     border: 1px solid black;
-    height: 200px;
+    height: 250px;
 }
 .k-slidebox-middle-left{
     flex: 0 0 50%;
-    height: 200px;
-    border: 1px solid black;
+    height: 250px;
     background-color: burlywood;
 }
 .k-slidebox-middle-left div{
@@ -271,9 +270,8 @@
 }
 .k-slidebox-middle-right{
     flex: 0 0 50%;
-    height: 200px;
-    border: 1px solid black;
-    background-color: darkorchid;
+    height: 250px;
+    background-color: white;
 }
 .k-slidebox-updownbox{
     display: flex;
@@ -281,11 +279,77 @@
 .k-upbutton{
     width: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .k-downbutton{
     width: 20px;
     text-align: center;
+    cursor: pointer;
 }
+.k-slidebox-middle-left-buttonbox{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+}
+.k-slidebox-middle-left-buttonbox button{
+    background-color: gray;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.k-slidebox-bottom{
+    border: 1px solid black;
+    height: 230px;
+    margin: auto;
+    background-color: rgba(5, 0, 0, 0.5);
+}
+.k-slidebox-bottom-screen{
+    width: 100%;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
+.k-slidebox-bottom-chairbox1{
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    padding: 5px;
+}
+.k-slidebox-bottom-chairbox1-left{
+    flex: 0 0 8%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+    color: white;
+}
+.k-slidebox-bottom-chairbox1-right{
+    flex: 0 0 92%;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 10px;
+}
+.k-slidebox-bottom-chairbox1-right div{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+.k-slidebox-bottom-chairbox1-right div:hover{
+    background-color: red;
+}
+
+
 /* 슬라이드 좌석선택 끝 */
 .k-mySwiper{
     padding-top: 30px;
@@ -306,12 +370,25 @@
   }
 
 @keyframes example {
-    from {width: 0px;}
-    to {width: 800px;}
+    0% {width: 0px;}
+    100% {width: 800px;}
 }
 .k-ii{
     width: 25px;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.k-fadein{
+    animation: fadein 3s;
+}
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }

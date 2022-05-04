@@ -119,8 +119,6 @@ const List4 = (props) => {
 
 const List5 = (props) => {
     const arr = [];
-    console.log(props.arr);
-    
     for(let i of props.arr){
        if(parseInt(tae) === i.id){ 
         arr.push( <div key={i.id} className='k-box3-top'>
@@ -341,10 +339,38 @@ content5 = <List7 arr={arr3}></List7>
                 <div className='k-slidebox-middle'>
                 <div className='k-slidebox-middle-left'>
                     {content5}
-                    
-                        
+                    <div className='k-slidebox-middle-left-buttonbox'>
+                        <button>예매 다시하기</button>
+                        <button>관람 할인 안내</button>
+                        <button>인원수 초기화</button>
+                    </div>
                 </div>
-                    <div className='k-slidebox-middle-right'></div>
+                
+                    <div className='k-slidebox-middle-right'>
+                        {content3}
+                    </div>
+                </div>
+                <div className='k-slidebox-bottom'>
+                    <div className='k-slidebox-bottom-screen'>
+                        <div>SCREEN</div>
+                    </div>
+                    <div className='k-slidebox-bottom-chairbox1'>
+                        <div className='k-slidebox-bottom-chairbox1-left'>
+                            <div>A</div>
+                        </div>
+                        <div className='k-slidebox-bottom-chairbox1-right'>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                            <div>4</div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div>5</div>
+                            <div>6</div>
+                            <div>7</div>
+                            <div>8</div>
+                        </div>
+                    </div>
+                    <div>결제정보</div>
                 </div>
             </div>
         </div>
@@ -390,9 +416,9 @@ content5 = <List7 arr={arr3}></List7>
 
         <div className='k-box3'>
             <div className='k-box3-checkbox'>
-                <div>영화 선택 &nbsp;&nbsp;<i className="fa-solid fa-circle-check" style={{ display : checkdisplay }}></i></div>
+                <div>영화 선택 &nbsp;&nbsp;<i className="fa-solid fa-circle-check k-fadein" style={{ display : checkdisplay }}></i></div>
                 <div>지역 선택 &nbsp;&nbsp;<i className="fa-solid fa-circle-check"></i></div>
-                <div>날짜 선택 &nbsp;&nbsp;<i className="fa-solid fa-circle-check" style={{ display : check2display }}></i></div>
+                <div>날짜 선택 &nbsp;&nbsp;<i className="fa-solid fa-circle-check k-fadein" style={{ display : check2display }}></i></div>
             </div>
             <div className='k-kkkk'>{content3}</div>
 
