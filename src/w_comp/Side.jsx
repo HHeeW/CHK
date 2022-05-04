@@ -14,7 +14,11 @@ const side = () => {
           <p>핫도그</p>
           <p>2,500 원 <i class="fa-solid fa-minus"></i> 300kcal</p> 
         </div>
-       
+        <div className="w_box">
+          <img className="w_pop"src="w_images/squid.jpg"/>
+          <p>징어 징어 오징어</p>
+          <p>4,500 원 <i class="fa-solid fa-minus"></i> 390kcal</p> 
+        </div>
     </div>
   )
 }
