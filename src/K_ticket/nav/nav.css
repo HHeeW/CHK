@@ -248,7 +248,7 @@
 .k-slidebox-container{
     width: 800px;
     height: 600px;
-    background-color: green;
+    background-color: black;
 }
 .k-slidebox-top{
     text-align: center;
@@ -289,7 +289,7 @@
 .k-slidebox-middle-left-buttonbox{
     display: flex;
     justify-content: flex-end;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .k-slidebox-middle-left-buttonbox button{
     background-color: gray;
@@ -320,37 +320,79 @@
 }
 .k-slidebox-bottom-chairbox1-left{
     flex: 0 0 8%;
-    display: flex;
     align-items: center;
-    height: 30px;
-    padding: 10px;
+    height: 180px;
+    padding: 2px 5px;
     color: white;
+}
+.k-slidebox-bottom-chairbox1-left div{
+    padding: 3px;
 }
 .k-slidebox-bottom-chairbox1-right{
     flex: 0 0 92%;
     display: flex;
-    align-items: center;
-    height: 30px;
-    padding: 10px;
+    flex-wrap: wrap;
+    height: 180px;
+    align-content: flex-start;
 }
 .k-slidebox-bottom-chairbox1-right div{
     width: 30px;
-    height: 30px;
+    height: 17px;
     border: 1px solid white;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     text-align: center;
-    padding: 2px;
-    margin: 5px;
-    color: white;
+    margin: 6px;
     cursor: pointer;
+    font-size: 13px;
+    color: white;
 }
 .k-slidebox-bottom-chairbox1-right div:hover{
     background-color: red;
 }
+.k-slidebox-bottom-moneybox{
+    display: flex;
+}
+.k-slidebox-bottom-moneybox-left{
+    display: flex;
+    align-items: center;
+    flex: 0 0 70%;
+    height: 100px;
+    background-color: #00c9c7;
+    padding: 10px;
+}
+.k-slidebox-bottom-moneybox-right{
+    flex: 0 0 30%;
+    height: 100px;
+    background-color: #34dcda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
 
 /* 슬라이드 좌석선택 끝 */
+
+/* 슬라이드 결제하기 */
+
+.k-slidebox2{
+    position: fixed;
+    z-index: 300;
+    background-color: rgba(5, 0, 0, 0.5);
+    right: 0;
+    transform: translateX(-550px);
+    animation: example2;
+    animation-duration: 1s;
+}
+.k-slidebox2-container{
+    width: 800px;
+    height: 600px;
+    background-color: yellowgreen;
+}
+
+/* 슬라이드 결제하기 끝 */
+
 .k-mySwiper{
     padding-top: 30px;
 }
@@ -370,6 +412,10 @@
   }
 
 @keyframes example {
+    0% {width: 0px;}
+    100% {width: 800px;}
+}
+@keyframes example2 {
     0% {width: 0px;}
     100% {width: 800px;}
 }

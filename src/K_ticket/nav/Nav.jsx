@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './nav.css';
 import age12 from '../images/12.png';
 import age15 from '../images/15.png';
 import age19 from '../images/19.png';
 import age0 from '../images/all.png';
 import anime from 'animejs';
-
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,7 +14,8 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { Pagination } from "swiper";
+import { set } from 'animejs';
 
 
 export default function Nav() {
@@ -63,8 +63,16 @@ export default function Nav() {
         {id: 1, clock1: '10:45', clock2: '12:45', clock3: '03:25', clock4: '05:50', dimension: '2D'},
         {id: 2, clock1: '08:45', clock2: '09:10', clock3: '01:24', clock4: '03:40', dimension: '3D'},
         {id: 3, clock1: '07:05', clock2: '09:35', clock3: '12:30', clock4: '01:50', dimension: '3Ds MAX'},
-    ]
-
+    ];
+    const arr5 = [
+        {id: 1, colunm: 'A'},
+        {id: 1, colunm: 'B'},
+        {id: 1, colunm: 'C'},
+        {id: 1, colunm: 'D'},
+        {id: 1, colunm: 'E'},
+        {id: 1, colunm: 'F'}
+    ];
+   
 
 const List = (props) =>{
     const arr2 = [];
@@ -176,9 +184,9 @@ const List7 = (props) => {
         <>
         <div className='k-slidebox-updownbox'>
              <div>{i.name}</div>
-                            <div><i className="fa-solid fa-circle-up k-upbutton" id={i.id} onClick={up}></i></div>
-                            <div>{updown[i.id-1]}</div>
-                            <div><i className="fa-solid fa-circle-down k-downbutton" id={i.id} onClick={down}></i></div>
+                <div><i className="fa-solid fa-circle-up k-upbutton" id={i.id} onClick={up}></i></div>
+                <div>{updown[i.id-1]}</div>
+                <div><i className="fa-solid fa-circle-down k-downbutton" id={i.id} onClick={down}></i></div>
                         </div>
                         </>)
     }
@@ -186,19 +194,43 @@ return(
     <>{arr}</>
 )
 }
+const List8 = () => {
+    const arr = [];
+    let count = 0;
+    let count2 = 0;
+    for(let i=1; i<49; i++){ // 8 * 6
+        count++;
+        count2 === 8 ? count2 = 1 : count2++;
+        arr.push(
+            <>
+                <div id={count} onClick={calculator} style={{ backgroundColor: color4[count] }}>{count2}</div>
+            </>
+        )
+    }
+    console.log(arr);
+    return(
+        <>{arr}</>
+    )
+}
 
 let [mode, setMode] = useState('bar');
 let [location, setLocation] = useState('seoul');
 let [color, setColor] = useState([]);
 let [color2, setColor2] = useState(['rgb(109, 130, 110)']);
 let [color3, setColor3] = useState(['rgb(109, 130, 110)']);
-let [tae, setTae] = useState(null);
+let [tae, setTae] = useState(null); // 날짜 선택 아이콘 나타남
 let [hoon, setHoon] = useState(1); // 좌석 화면 content4
 let [slidedisplay, setSlidedisplay] = useState('false'); // 시간누르면 슬라이드 화면 display
 let [checkdisplay, setCheckdisplay] = useState('none'); // 영화 선택 아이콘
 let [check2display, setCheck2display] = useState('none'); // 날짜 선택 아이콘
 let [datedisplay, setDatedisplay] = useState([]); // 날짜 선택시 해당 날짜만 background 줘야해서 배열
 let [updown, setUpdown] = useState([1, 0, 0]); // slidebox 일반 청소년 우대 updown
+let [money, setMoney] = useState(11000); // 결제 정보
+let [color4, setColor4] = useState([]); // 좌석 선택하면 아이콘 배경이 레드로 변함
+let [count2, setCount2] = useState(1); // up함수에 의해서 증가되는 count2에 따라서 레드를 다시 클릭하면 블랙으로 바뀐다.
+// 그러면서 count2는 다시 ++이 된다.
+let [slidedisplay2, setSlidedisplay2] = useState('false'); // slidepage2 결제하기 누르면 나타나는 slide
+
 
 
 
@@ -254,11 +286,8 @@ const changeColor = (e) => {
          // All properties except 'scale' inherit 250ms delay
       });
     
-    console.log(e.currentTarget.id);
     setTae(e.currentTarget.id);
-    console.log(`content3 : ${content3}`);
     
-    console.log(content3);
     let newColor = [];
     color = [];
     // console.log(e.target.id);
@@ -276,6 +305,9 @@ const sort = (e) => {
 const slidepage = () => {
     setSlidedisplay(!slidedisplay);
 }
+const slidepage2 = () => {
+    setSlidedisplay2(!slidedisplay2);
+}
 const datecheck = (e) => { // 날짜 누르면
     setCheck2display('block'); // 날짜 아이콘 block
     setHoon(hoon + 1);
@@ -283,20 +315,60 @@ const datecheck = (e) => { // 날짜 누르면
     newDate[e.currentTarget.id] = 'rgb(109, 130, 110)';
     setDatedisplay(newDate);
 }
-const up = (e) => { // slide 일반 청소년 up
+
+const up = (e) => { // slide 일반 청소년 우대 up
     let count =  [...updown];
+    setCount2( count2 + 1);
+    const a = updown.filter(x => x);
+    if(a.length === 0){ let color = []; setColor4(color); }
+    /* 좌석 하나만 빨간색인데 updown은 0, 여기서 up시키면 좌석 빨간색은 안사라져서
+    up시키면 좌석 빨간색도 없어져야한다. */
+
     switch(true){
-        case e.target.id === '1' : console.log('1입니다.'); count[0] = parseInt(updown[0]+1);  setUpdown(count); break;
-        case e.target.id === '2' : console.log('2입니다.'); count[1] = parseInt(updown[1]+1);  setUpdown(count); break;
-        case e.target.id === '3' : console.log('3입니다.'); count[2] = parseInt(updown[2]+1);  setUpdown(count); break;
+        case e.target.id === '1' : count[0] = parseInt(updown[0]+1);  setUpdown(count); setMoney(money + 11000); break;
+        case e.target.id === '2' : count[1] = parseInt(updown[1]+1);  setUpdown(count); setMoney(money + 8000); break;
+        case e.target.id === '3' : count[2] = parseInt(updown[2]+1);  setUpdown(count); setMoney(money + 13000); break;
     } 
 }
 const down = (e) => { // slide 일반 청소년 down
     let count =  [...updown];
+    if(count2 !== 0){ setCount2( count2 - 1); }
+
+    // 좌석 빨간색 하나씩 줄어야됨
+    const a = color4.filter(x => x === 'red');
+    const b = updown.reduce((acc, cur) => acc + cur);
+    if(a.length === b){ console.log('ee');
+        let color = [...color4];
+        color[color4.findIndex(x => x === 'red')] = '';
+        setColor4(color);    
+    } 
+
     switch(true){
-        case e.target.id === '1' : console.log('1입니다.'); count[0] = parseInt(updown[0]-1);  setUpdown(count); break;
-        case e.target.id === '2' : console.log('2입니다.'); count[1] = parseInt(updown[1]-1);  setUpdown(count); break;
-        case e.target.id === '3' : console.log('3입니다.'); count[2] = parseInt(updown[2]-1);  setUpdown(count); break;
+        case e.target.id === '1' : count[0] = parseInt(updown[0]-1);  setUpdown(count); setMoney(money - 11000); break;
+        case e.target.id === '2' : count[1] = parseInt(updown[1]-1);  setUpdown(count); setMoney(money - 8000); break;
+        case e.target.id === '3' : count[2] = parseInt(updown[2]-1);  setUpdown(count); setMoney(money - 13000); break;
+    }
+}
+
+const calculator = (e) => {
+
+    if(count2 > 0 ){
+        let color =  [...color4];
+        color[e.target.id] = 'red';
+        setColor4(color);
+        setCount2( count2 - 1 );
+
+        let down = [...updown];
+
+        for(let i=0; i<2; i++){
+            if(down[i] !== 0){ down[i] -= 1; break; }continue; }
+        }
+
+    if(color4[e.target.id] === 'red'){
+        let color =  [...color4];
+        color[e.target.id] = 'black';
+        setColor4(color);
+        setCount2(count2 + 1);
     }
 }
 
@@ -305,6 +377,7 @@ let content2 = null;
 let content3 = null;
 let content4 = null;
 let content5 = null;
+let content6 = null; // 인원/좌석 슬라이드 좌석 반복
 
 if(mode === 'bar'){
     content = <List arr={arr}></List>
@@ -327,10 +400,20 @@ content4 = <List6 arr={arr4}></List6>
 content5 = <List7 arr={arr3}></List7>
 
 
-
+content6 = <List8 arr={arr5}></List8> // 인원/좌석 선택에서 좌석 반복
 
   return (
     <div className='k-container-nav'>
+        {/* 슬라이드 결제하기 */}
+        <div className='k-slidebox2' style={{display: slidedisplay2 ? 'none' : 'block'}}>
+            <div className='k-slidebox2-container'>
+                <button onClick={slidepage2}>이전으로</button>
+            </div>
+        </div>
+
+        {/* 슬라이드 결제하기 끝*/}
+
+        
         {/* 슬라이드  좌석선택*/}
 
         <div className='k-slidebox' style={{display: slidedisplay ? 'none' : 'block'}}>
@@ -339,10 +422,17 @@ content5 = <List7 arr={arr3}></List7>
                 <div className='k-slidebox-middle'>
                 <div className='k-slidebox-middle-left'>
                     {content5}
+                    <div>일반 11,000원 / 청소년 8,000원 / 우대 13,000원</div>
                     <div className='k-slidebox-middle-left-buttonbox'>
-                        <button>예매 다시하기</button>
+                        <button onClick={slidepage}>이전으로</button>
                         <button>관람 할인 안내</button>
-                        <button>인원수 초기화</button>
+                        <button onClick={()=>{
+                            console.log('aaaaaa');
+                            setUpdown([1, 0, 0]);
+                            setCount2(1);
+                            setColor4([]);
+                            setMoney(11000);
+                        }}>인원수 초기화</button>
                     </div>
                 </div>
                 
@@ -357,25 +447,33 @@ content5 = <List7 arr={arr3}></List7>
                     <div className='k-slidebox-bottom-chairbox1'>
                         <div className='k-slidebox-bottom-chairbox1-left'>
                             <div>A</div>
+                            <div>B</div>
+                            <div>C</div>
+                            <div>D</div>
+                            <div>E</div>
+                            <div>F</div>
                         </div>
                         <div className='k-slidebox-bottom-chairbox1-right'>
-                            <div>1</div>
-                            <div>2</div>
-                            <div>3</div>
-                            <div>4</div>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
-                            <div>5</div>
-                            <div>6</div>
-                            <div>7</div>
-                            <div>8</div>
+                            {content6}
                         </div>
                     </div>
-                    <div>결제정보</div>
+                    <div className='k-slidebox-bottom-moneybox'>
+                        <div className='k-slidebox-bottom-moneybox-left'>
+                            <div>총합계 : &nbsp;</div>
+                            <div>{money}원</div>
+                        </div>
+                        <div className='k-slidebox-bottom-moneybox-right'  onClick={slidepage2}>
+                            <div>결제하기</div>
+                        </div>
+        
+                    </div>
                 </div>
             </div>
         </div>
  
         {/* 슬라이드  좌석선택 끝*/}
+
+        
 
         <div className='k-box1'>
             <div className='k-box1-top'>영화</div>
@@ -425,7 +523,7 @@ content5 = <List7 arr={arr3}></List7>
 
             <div className='k-box3-middle'>
                 {/* 외부에서 가져온 슬라이드라서 useState가 되지않는다. 그래서 노가다로 반복 */}
-                <Swiper slidesPerView={7} spaceBetween={60} freeMode={true} pagination={{ clickable: true, }} modules={[Pagination]} className="k-mySwiper">
+                <Swiper slidesPerView={7} spaceBetween={60} pagination={{ clickable: true, }} modules={[Pagination]} className="k-mySwiper">
                     <SwiperSlide><div className='k-ii' id='1' onClick={datecheck} style={{ backgroundColor : datedisplay[1] }}>1</div><br />
                     <div className='k-ii' id='1' onClick={datecheck}>일</div></SwiperSlide>
                     <SwiperSlide><div className='k-ii' id='2' onClick={datecheck} style={{ backgroundColor : datedisplay[2] }}>2</div><br />
