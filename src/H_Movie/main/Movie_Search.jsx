@@ -21,7 +21,6 @@ const Movie_Search = () => {
     }
   }
   const Value = () =>{
-    console.log(movie_name)
     for(let i in movies){
       if(movie_name != ""){
         let entitle = movies[i].entitle.toUpperCase()
