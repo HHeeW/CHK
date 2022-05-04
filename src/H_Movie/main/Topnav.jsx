@@ -47,7 +47,7 @@ const EventBox = styled.li``
 
 const Member = styled.div`
   height: 100%;
-  width:20%;
+  width:25%;
   display:flex;
   justify-content:space-between;
   align-items: center;
@@ -62,7 +62,7 @@ const SignUpBox = styled.div`
   cursor: pointer;
   text-align:center;
 `
-const Flex_SB = styled.div`
+const Flex_SA = styled.div`
   width:100%;
   display:flex;
   justify-content: space-around;
@@ -90,7 +90,7 @@ function Topnav() {
             </Menu>
           </MenuBox>
           <Member>
-            <Flex_SB>
+            <Flex_SA>
               <LoginBox><Link to="login">
                 <Login size={30} />
                 로그인
@@ -102,10 +102,10 @@ function Topnav() {
                   회원가입
                 </Link>
               </SignUpBox>
-            </Flex_SB>
-            <Flex_SB>
+            </Flex_SA>
+            <Flex_SA>
               <Movie_Search />
-            </Flex_SB>
+            </Flex_SA>
           </Member>
         </TopNav>
       </FixBox>
