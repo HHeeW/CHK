@@ -3,6 +3,13 @@
     margin: auto;
     width: 1200px;
 }
+.k-book_icon{
+    color:#00c9c7;
+    font-size: 14px;
+}
+.k-score, .k-opening, .k-director{
+    font-size: 13px;
+}
 .k-container-nav{
     padding: 10px;
     display: flex;

@@ -1,11 +1,11 @@
-import Nav from "./nav/Nav";
+import Page from "./nav/Page";
 import {Routes, Route} from "react-router-dom";
 
 function App() {
   return (
     <>
     <Routes>
-        <Route path='/ticket' element ={<Nav />} />
+        <Route path='/ticket' element ={<Page />} />
     </Routes>
     </>
 

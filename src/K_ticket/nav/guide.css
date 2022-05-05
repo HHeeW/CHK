@@ -1,0 +1,51 @@
+.k-slidebox3{
+    display: flex;
+    position: fixed;
+    z-index: 300;
+    bottom: 200px;
+    left: 600px;
+}
+.k-slidebox3-container{
+    width: 400px;
+    height: 400px;
+    background-color: greenyellow;
+}
+.k-slidebox3-top{
+    background-color: #00c9c7;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.k-slidebox3-middle{
+    padding: 5px;
+    padding-left: 30px;
+}
+.k-slidebox3-bottom{
+    padding: 5px;
+    border: 1px solid black;
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    font-size: 13px;
+}
+.k-slidebox3-bottom div{
+    padding: 5px;
+}
+.k-slidebox3-buttonbox{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.k-slidebox3-buttonbox div{
+    padding: 10px;
+}
+.k-slidebox3-buttonbox button{
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 70px;
+}
+.k-slidebox3-buttonbox button:hover{
+    background-color: gray;
+}
