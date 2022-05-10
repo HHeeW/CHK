@@ -23,6 +23,8 @@ export default class TopBar extends Component {
           <li><Link to="/snack" >Snack</Link></li>
           <span><i class="fa-solid fa-minus"></i></span>
           <li><Link to="/giftshop" >Gift - Shop</Link></li>
+          <span><i class="fa-solid fa-minus"></i></span>
+          <li><Link to="/membership"> MemberShip </Link></li>
         </ul> 
       </div> 
       

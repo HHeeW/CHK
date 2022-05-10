@@ -1,0 +1,93 @@
+/******* snack-menu ******/
+.w_s-n{
+    /* border: 1px solid black; */
+    width: 1100px;
+    margin: 0px auto;
+    
+}
+.w_s-n>img:nth-child(2){
+    width:1100px;
+    height: 100px;
+}
+
+.w_membership{
+    display: flex;
+    justify-content: center;
+}
+.w_membership>img{
+    width:50%;
+    height: 500px;
+   
+}
+.w_s-n h2{
+    border-bottom: 3px solid #00C8C8;
+    padding-bottom: 10px;
+}
+.w_s-n h2 i{
+    font-size: 5px;
+    
+}
+.w_membership-text{
+    background-color: #00C8C8;
+    width:40%;
+    height: 420px;
+    margin-top: 3%;
+    margin-left: 5%;
+    padding: 0 20px;
+}
+.w_membership-text>h3{
+    text-align: center;
+}
+.w_membership-text>p>span{
+    color:transparent;
+}
+.w_member-button-place{
+    display: flex;
+    justify-content: center;
+    
+}
+.w_member-button{
+    width: 400px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: #00C8C8;
+    color: white;
+    font-size: 30px;
+    border: 3px solid #00C8C8;
+    border-radius: 30px;
+    font-family: 'HOENG';
+}
+.w_member-button:hover{
+    background-color: white;
+    color: #00C8C8;
+    cursor: pointer;
+}
+/****메인페이진데 그냥 여기다가 함****/
+.w_mainpage{
+    width: 1200px;
+    height: 500px;
+    background-color: yellow;
+}
+.w_b-footer{
+    background-color: #00c8c8;
+    bottom: 0;
+    width: 100%;
+    height: 37%;
+}
+.w_b-footer>ul{
+    display: flex;
+    justify-content: space-around;
+}    
+.w_b-footer>ul>li{  
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+   
+ 
+}
+.w_b-footer>ul>li>i{
+    width: 50%;
+    height: 50%;
+}
