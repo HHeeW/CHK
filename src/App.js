@@ -18,10 +18,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
+
         <H_Movie />
         <K_Ticket />
         <W_Comp />
         <B_Event />
+        
         <Footer/>
     </BrowserRouter>
   )
