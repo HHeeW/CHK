@@ -8,7 +8,6 @@ const Page = () => {
     <div>
         <Nav />
         <Slide_page2 />
-        <Main />
     </div>
   )
 }
