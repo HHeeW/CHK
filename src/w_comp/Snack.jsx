@@ -3,6 +3,7 @@ import './snack.css';
 import Popcorn from './Popcorn';
 import Drink from './Drink';
 import Side from './Side';
+import Combo from './Combo';
 import FixBar from './FixBar';
 import TopBar from './TopBar';
 const Snack = () => {
@@ -13,6 +14,7 @@ const Snack = () => {
       setPview(true)
       setAview(0)
       setOview(0)
+      setRview(0)
   }
 
   const [aview, setAview] = useState(false);
@@ -20,6 +22,7 @@ const Snack = () => {
     setPview(0)
     setAview(true)
     setOview(0)
+    setRview(0)
   }
 
   const [oview, setOview] = useState(false);
@@ -27,6 +30,15 @@ const Snack = () => {
     setPview(0)
     setAview(0)
     setOview(true)
+    setRview(0)
+  }
+ 
+  const [rview, setRview] = useState(false);
+  const Rview = () =>{
+    setPview(0)
+    setAview(0)
+    setOview(0)
+    setRview(true)
   }
  
 
@@ -60,6 +72,13 @@ const Snack = () => {
                             <Side/>:
                             <></>
                             )}</div>
+              </li>
+              <i class="fa-solid fa-minus"></i>
+              <li><button onClick={Rview}>콤보 / 세트</button>
+                  <div className="w_rrr"> {(rview?
+                        <Combo/>:
+                        <></>
+                        )}</div>
               </li>
           </ul>
         </div>

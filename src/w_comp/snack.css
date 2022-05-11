@@ -36,29 +36,22 @@
     top: 30px;
     left: 0;
 }
-.w_snack-bar>li{
-    margin-right: 10px;
-}
 .w_snack-bar>li>button{
     font-size: 18px;
     border: none;
     background-color:transparent;
+    margin:0 10px;
 }
 .w_snack-bar>li>button:hover{
     cursor: pointer;
     color: #00c8c8;
     transition: all 0.8s;
 }
-.w_snack-bar>li:nth-child(3){
-    margin-left: 10px;
-}
-.w_snack-bar>li:nth-child(5){
-    margin-left: 10px;
-}
 .w_snack-bar>i{
     transform:rotate(90deg);
     color: #00C8C8;
     font-size: 18px;
+    margin-right: 8px;
 }
 /******* popcorn ******/
 .w_s-p{
@@ -82,12 +75,33 @@
     margin-left: 9px;
     
 }
+.w_combox{
+    flex: 0 0 24%;
+    width: 200px;
+    height: 350px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #EAE9E5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 9px;
+    
+}
 .w_box:hover{
     border: 2px solid #00c8c8;
 }
+.w_combox:hover{
+    border: 2px solid #00c8c8;
+}
+.w_box>span{
+    padding-top: 50px;
+}
+.w_combox>span{
+    padding-top: 50px;
+}
 .w_pop{
     width: 90%;
-    height: 70%;
+    height: 65%;
     margin: 10px auto;
     border-radius: 10px;
 }
@@ -101,12 +115,26 @@
     margin-top: 0;
     margin-bottom: 15px;
 }
+.w_combox>p{
+    font-size: 85%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
 .w_box>p:nth-child(2){
     font-size: 18px;
+}
+.w_combox>p:nth-child(2){
+    font-size: 18px;
+    margin-bottom:-5px;
 }
 .w_box>p:nth-child(3){
     font-size: 16px;
 }
+.w_combox>p:nth-child(4){
+    font-size: 16px;
+}
+
 .w_box>p>i{
     transform: rotate(90deg);
 }
