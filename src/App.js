@@ -22,7 +22,6 @@ function App() {
         <K_Ticket />
         <W_Comp />
         <B_Event />
-        
         <Footer/>
     </BrowserRouter>
   )

@@ -41,7 +41,6 @@ export default function Nav() {
         {id: 18, age: '15', score: 95, img: age15, poster: '/K_images/귀칼.jpg', title: '극장판 귀멸의 칼날-무한열차편', opening: '2022.04.21', director: '소토자키 하루오'},
         {id: 19, age: '전체', score: 93, img: age0, poster: '/K_images/수퍼 소닉2.jpg', title: '수퍼소닉2', opening: '2022.04.06', director: '제프 파울러'},
         {id: 20, age: '15', score: 82, img: age15, poster: '/K_images/모비우스.jpg', title: '모비우스', opening: '2022.03.30', director: '다니엘 에스피노사'}
-
     ];  
     const arrsort = [...arr];
 

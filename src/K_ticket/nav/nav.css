@@ -47,7 +47,7 @@
 }
 .k-box1-bottom{
     height: 650px;
-    overflow: auto;
+    
 }
 .k-bar{
     border-bottom: 2px solid black;
@@ -123,13 +123,13 @@
 .k-box2-middle-leftbox{
     flex: 0 0 50%;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     border-right: 1px solid black;
     
 }
 .k-box2-middle-rightbox{
     flex: 0 0 50%;
-    line-height: 50px;
+    line-height: 60px;
     text-align: center;
 }
 .k-box2-middle-leftbox:hover{
@@ -211,7 +211,6 @@
 .k-box3-middle{
     width: 100%;
     height: 130px;
-    border: 1px solid red;
 }
 .k-mySwiper{
     padding: 25px;
@@ -267,7 +266,7 @@
 .k-slidebox-middle-left{
     flex: 0 0 50%;
     height: 250px;
-    background-color: burlywood;
+    background-color: white;
 }
 .k-slidebox-middle-left div{
     padding: 5px;
