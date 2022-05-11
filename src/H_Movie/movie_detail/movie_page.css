@@ -34,7 +34,7 @@
     position: absolute;
     top: -80px;
     left: 30px;
-    width: 300px;
+    width: 25%;
     z-index: 2;
     box-shadow: 5px 5px 3px rgba(255,255,255,0.3),
                 5px -5px 3px rgba(255,255,255,0.3),
@@ -42,12 +42,12 @@
                 -5px -5px 3px rgba(255,255,255,0.3);
 }
 .H_detail_poster:hover{
-    width: 600px;
-    left: -170px;
+    width: 50%;
+    left: -15%;
 }
 .H_movie_detail_text_box{
-    margin-left: 400px;
-    margin-right: 150px;
+    margin-left: 35%;
+    margin-right: 15%;
 }
 .H_nav_gnb{
     width: 70%;
@@ -82,7 +82,6 @@ li>button.active{
     position: absolute;
     top: 50px;
     left: 0;
-    margin-top: 30px;
     width: 100%;
 }
 
@@ -90,6 +89,7 @@ li>button.active{
     white-space: pre-line;
 }
 .H_information>h1{
+    line-height: 40px;
     text-shadow: 0px 0px 10px rgba(0,200,200,1),
                  2px 0px 1px #000, -2px 0px 1px #000,
                  0px 2px 1px #000, 0px -2px 1px #000;

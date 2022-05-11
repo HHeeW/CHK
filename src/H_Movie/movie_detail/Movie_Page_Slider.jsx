@@ -7,7 +7,7 @@ import { Autoplay, EffectCoverflow, Pagination, Navigation } from "swiper";
 import List_Page from "../List/List_Page";
 
 const Movie_Page_Slider = () => {
-  let movie = parseInt(window.location.pathname.substr(16, ));
+  let movie = parseInt(window.location.pathname.substr(17, ));
   let list = List_Page()
   
   console.log(list[0].slider1)
@@ -35,19 +35,17 @@ const Movie_Page_Slider = () => {
         modules={[Autoplay, EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
         >
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider1}.jpg`} alt="d1" /></SwiperSlide>
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider2}.jpg`} alt="d2" /></SwiperSlide>
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider3}.jpg`} alt="d3" /></SwiperSlide>
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider4}.jpg`} alt="d4" /></SwiperSlide>
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider5}.jpg`} alt="d5" /></SwiperSlide>
-          <SwiperSlide><img className='H_Movie_Page_Slider' src={`H_images/slider/${list[i].slider6}.jpg`} alt="d6" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider1}`} alt="slider_poter1" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider2}`} alt="slider_poter2" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider3}`} alt="slider_poter3" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider4}`} alt="slider_poter4" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider5}`} alt="slider_poter5" /></SwiperSlide>
+          <SwiperSlide><img className='H_Movie_Page_Slider' src={`${list[i].slider6}`} alt="slider_poter6" /></SwiperSlide>
         </Swiper>
     }
   }
   
-  return (
-    Swiper_Slides
-  )
+  return Swiper_Slides
 }
 
 export default Movie_Page_Slider
