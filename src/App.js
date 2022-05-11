@@ -7,12 +7,17 @@ import W_Comp from './w_comp/w_comp'
 import Footer from './w_comp/Footer';
 import {
   BrowserRouter,
+  Routes,
+  Route,
 } from "react-router-dom";
+import Home from './Home';
 function App() {
   return (
     <BrowserRouter>
         <Topnav />
-
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
         <H_Movie />
         <K_Ticket />
         <W_Comp />

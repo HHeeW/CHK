@@ -82,7 +82,7 @@ function Topnav() {
           <MenuBox>
             <Menu>
               <MovieBox>
-                <Link to={"/"}> 영화</Link>
+                <Link to={"/movie"}> 영화</Link>
               </MovieBox>
               <TicketBox><Link to={"/ticket"}>예매</Link></TicketBox>
               <StoreBox><Link to={"/snack"}>스토어</Link></StoreBox>
