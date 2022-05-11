@@ -19,7 +19,7 @@ const Footer = () => {
     <div className="w_footer">
         <div className="w_footer-con">
             <div className="W_logo">
-                <img src="w_images/logo.png"></img>
+                <img src="/w_images/logo.png"></img>
             </div>
             
            <div className="w_text">

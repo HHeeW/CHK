@@ -76,7 +76,7 @@ function Topnav() {
         <TopNav>  
           <LogoBox>
           <Link to={"/"}>
-            <img src="H_images/logo.png" alt="logo"className='H_logo' />
+            <img src="/H_images/logo.png" alt="logo"className='H_logo' />
           </Link>
           </LogoBox>
           <MenuBox>
