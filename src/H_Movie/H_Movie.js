@@ -12,7 +12,7 @@ function App() {
     <>
       <ScrollToTop />
       <Routes>
-        <Route path='/' element={<Movie />} />
+        <Route path='/movie' element={<Movie />} />
         <Route path='/Movie_Page_List/*' element ={<Movie_Page_List />} />
       </Routes>
     </>
