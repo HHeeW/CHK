@@ -21,11 +21,12 @@ const Movie_Search = () => {
     }
   }
   const Value = () =>{
+    console.log(movie_name)
     for(let i in movies){
       if(movie_name != ""){
         let entitle = movies[i].entitle.toUpperCase()
         if(movies[i].title.includes(movie_name) || entitle.includes(movie_name.toUpperCase())){
-          window.location.href = `/Movie_Page_List${parseInt(i)+1}`;
+          window.location.href = `/Movie_Page_List/${parseInt(i)+1}`;
         }
       }
     }
