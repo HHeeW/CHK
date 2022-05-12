@@ -6,9 +6,11 @@
 }
 .H_Benner .swiper-button-prev{
     margin-left: 10%;
+    color: #00c8c8 ;
 }
 .H_Benner .swiper-button-next{
     margin-right: 10%;
+    color: #00c8c8 ;
 }
 .H_Benner_Slide{
     max-width: 1200px;
