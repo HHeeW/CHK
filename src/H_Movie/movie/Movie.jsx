@@ -1,6 +1,5 @@
 import './movie.css';
 import Movie_List from './Movie_List';
-import Benner from '../benner/Benner';
 
 const Movie = () => {
   return (

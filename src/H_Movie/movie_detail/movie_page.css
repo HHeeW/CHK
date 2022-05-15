@@ -108,7 +108,8 @@ li>button.active{
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 200, 200, 1);
 }
-.swiper-button-next,
-.swiper-button-prev{
+
+.H_nav_lnb .swiper-button-next,
+.H_nav_lnb .swiper-button-prev{
     color: #00c8c8 !important;
 }

@@ -48,7 +48,7 @@ const Snack = () => {
      <TopBar /> 
     <div className="w_s-n">
       <div className="w_themoment">
-        <img src="w_images/enjoy_the_moment.jpg"></img>
+        <img src="w_images/enjoythemoment.png"></img>
       </div>
         <h2><i class="fa-solid fa-circle"></i> snack : 맛있으면 0 칼로리~!</h2>
         <div className="w_snack-bar_box">

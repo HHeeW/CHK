@@ -4,7 +4,7 @@ import List_Detail from '../List/List_Page';
 
 const Movie_Page_List = () => {
   let movies = List_Detail();
-  let moive = window.location.pathname.substr(17, );
+  let moive = window.location.pathname.substring(17, );
   let movie_Page_List = [];
   for(let i in movies){
     if(moive-1 == i){

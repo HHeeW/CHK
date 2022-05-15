@@ -38,7 +38,10 @@ const MemberShip = () => {
 
 
         <div className="w_mainpage">
-            
+                <div className="w_b-middle">
+                    <img src="./w_images/mainpage/1.png"></img>
+                    <img src="./w_images/mainpage/2.png"></img>
+                </div>
             
             
             <div className="w_b-footer">
@@ -48,6 +51,8 @@ const MemberShip = () => {
                 <li><i class="fa-regular fa-user"></i><p>멤버십 혜택</p></li>
                 <li>위로 올라가기</li>
               </ul>
+
+
             </div>
         </div>
     </div>

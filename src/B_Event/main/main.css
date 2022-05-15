@@ -1,74 +1,129 @@
 .b_etcBox{
-  font-family: 'GowunDodum-Regular';
-  font-weight: 00;
-    width: 1200px;
-    height: 300px;
-    margin: 50px auto;
-    display: flex;
-}
-.b_etc{
-    height: 100%;
-}
-.b_tool{
-   text-align: right;
-}
-.b_notice, .b_faq{
-    height: 50%;
-    text-align: center;
-   
-}
-.b_faq>span{
-    display: inline-block;
-    width: 30%;
-    border: 1px solid #333;
-    text-align: center;
-    border-radius: 15px;
-    margin-right: 5px;
-}
-.b_notice>div{
-    display: flex;
-    justify-content: space-between;
-
-}
-.b_notice>ul>li>a{
-    line-height: 30px;
-}
-.b_Qna{
-text-align: left;
-    border-bottom: 1px solid #999;
-
-}
-
-.b_etc{
-    width: 30%;
-    background-color: #dede;
-    margin-right: 20px;
-
-}
-.b_adBox{
-    background-color: #f9f1f3;
-    width: 70%;
+    font-family: 'GowunDodum-Regular';
+    font-weight: 00;
+      width: 1200px;
+      height: 400px;
+      margin: 50px auto;
+      display: flex;
+     
+  }
+  .b_etc{
+      height: 100%;
+  }
+  .b_tool{
+     text-align: right;
+  
+  }
+  .b_notice{
+      position: relative;
+  }
+  
+  .noticeList li{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
  
+  }
+  .b_notice ul li a:hover {
+      color: rgba(0,0,0,0.5);
+  }
+.b_faq{
+      height: 40%;
+      text-align: center;
+      margin-top: 10px;
+     
+  }
+  .b_morebtn{
+      display: block;
+      position: absolute;
+      right: 9px;
+      top: 3px;
+  }
+a.b_morebtn:hover{
+      color: rgba(0,0,0,0.5);
+  }
+a.b_btnmore:hover{
+    color: rgba(0,0,0,0.5);
 }
-/* .b_boxTitle{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
-.b_List{
-    margin-left: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-} 
-.b_ad{
-    height: 300px;
-}
-.b_ad>.b_List>li img{
-    max-width: 100%;
-}
-.b_List li{
-   width: 25%;
-   height: 250px;
-    margin-right: 10px;
-} 
+  .b_Qna{
+      padding-left: 10px;
+  }
+  p{
+      margin-block-end: 0;
+      margin-block-start: 0;
+      line-height: 30px;
+  }
+  .b_faq>span{
+      display: inline-block;
+      width: 30%;
+      border: 1px solid #333;
+      text-align: center;
+      border-radius: 15px;
+      margin-right: 5px;
+      line-height: 30px;
+      margin-top: 10px; 
+  }
+  .b_faq>span:hover{
+      color: rgba(0,0,0,0.5);
+  }
+  
+  .b_notice>ul>li>a{
+      line-height: 30px;
+  }
+  .b_Qna{
+      text-align: left;
+      border-bottom: 1px solid #999;
+  
+  }
+  
+  .b_etc{
+      width: 30%;
+     
+      margin-right: 10px;
+  
+  }
+  .b_btnmore{
+      position: absolute;
+      right: 6px;
+      top: 2px;
+  }
+  .b_adBox{
+      position: relative;
+      width: 68%;
+  }
+  .b_ad{
+      display: flex;
+      justify-content:space-evenly ;
+      margin-top: 30px;
+      align-items: center;
+  }
+  .b_ad li:not(.b_align){
+      /* width: 30%; */
+      text-align:  center;
+  }
+  .b_align{
+      text-align: center;
+      font-size: 25px;
+  
+  }
+  .b_ad li>h3{
+      margin-block-end: 0;
+      margin-block-start: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  }
+  .b_ad li>p{
+      text-align: left;
+  }
+  
+  .b_ad li>img{
+      border-radius: 10px;
+      max-width: 100%;
+      padding-right: 5px;
+      margin-top: 10px;
+  }
+  
+  .b_lala{
+      margin-left: 5px;
+  }
