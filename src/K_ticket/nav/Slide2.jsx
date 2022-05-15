@@ -30,7 +30,7 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
         for(let i of props.arr){
             if(i.id === parseInt(props.movie)){
             arr2.push(<div className='k-slide2-main-left-top'>
-            <div className='k-slide2-main-left-poster'><img src={i.poster} width='175' height='200'></img></div>
+            <div className='k-slide2-main-left-poster'><img src={i.poster} width='177' height='198'></img></div>
             <div className='k-slide2-main-left-info'>
                 <div className='k-slide2-main-left-info-title'>
                     <div><img src={i.img}></img></div>

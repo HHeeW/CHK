@@ -1,6 +1,9 @@
-import React, { useRef, useState }from 'react'
+import React, { useState, useEffect, useContext }from 'react'
 import './nav.css';
 import Slide1 from './Slide1';
+import { ThemeContext } from '../context/ThemeContext';
+import { useLocation } from 'react-router-dom';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +16,10 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 
 const Nav = () => {
+    const data = useContext(ThemeContext);
+    const slide1_display_key = useLocation().state; // 타지역에서 예매하기 눌렀을 때 변수에 저장 근데 객체로하면 왜 안될까??
 
+    
     const arr = [
         {id: 1, age: '12', score: 97, img: '/K_images/12.png', poster: '/K_images/닥터스트레인지.jpg', title: '닥터스트레인지-대혼돈의멀티버스', opening: '2022,05,04', director: '샘 레이미'},
         {id: 2, age: '전체', score: 98, img: '/K_images/all.png', poster: '/K_images/해리포터 죽음의 성물.jpg', title: '해리포터와 죽음의 성물2' , opening: '2011.07.13', director: '데이빗 예이츠'},
@@ -37,12 +43,19 @@ const Nav = () => {
         {id: 20, age: '15', score: 82, img: '/K_images/15.png', poster: '/K_images/모비우스.jpg', title: '모비우스', opening: '2022.03.30', director: '다니엘 에스피노사'}
     ];
     const [slidedisplay, setSlidedisplay] = useState('false');
-    let [aa, setAa] = useState();
+    let [aa, setAa] = useState(); // movie 선택 시 movie_select 활성화
 
     const imgclick = (e) => {
         setAa(e.target.id);
         setSlidedisplay(!slidedisplay);
     }
+
+    useEffect(()=>{ // 타지역에서 에매하기 눌렀을 때 실행
+        if(slide1_display_key !== null){
+            setSlidedisplay(!slidedisplay);
+            setAa(slide1_display_key);
+        }
+    },[slide1_display_key]);
 
   return (
     <div className='k-nav-container'>
