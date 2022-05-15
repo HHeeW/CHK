@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './membership.css';
 import TopBar from './TopBar';
+
 import { Link } from 'react-router-dom';
 
 const MemberShip = () => {
@@ -36,25 +37,6 @@ const MemberShip = () => {
             <Link to={'/join'}><button className="w_member-button">회원가입 바로 가기</button></Link>
         </div>
 
-
-        <div className="w_mainpage">
-                <div className="w_b-middle">
-                    <img src="./w_images/mainpage/1.png"></img>
-                    <img src="./w_images/mainpage/2.png"></img>
-                </div>
-            
-            
-            <div className="w_b-footer">
-              <ul>
-                <li><i class="fa-regular fa-martini-glass-citrus"></i><p>스낵</p></li>
-                <li><i class="fa-regular fa-gift"></i><p>굿즈</p></li>
-                <li><i class="fa-regular fa-user"></i><p>멤버십 혜택</p></li>
-                <li>위로 올라가기</li>
-              </ul>
-
-
-            </div>
-        </div>
     </div>
     </>
   )
