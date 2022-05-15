@@ -1,0 +1,215 @@
+.k-sun{
+    color: rgb(245, 114, 13);
+}
+.k-moon{
+    color: darkblue;
+}
+
+.k-slide1-container{
+    width: 100%;
+    height: 800px;
+    position: fixed;
+    z-index: 20;
+    color: white;
+    right: 0px;
+    top: 20px;
+    animation: k-example;
+    animation-duration: 1s;
+}
+.k-slide1-box{
+    width: 1200px;
+    height: 650px;
+    margin: auto;
+    margin-top: 70px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.k-slide1-header{
+    display: flex;
+    align-items: center;
+}
+.k-slide1-header-left{
+    flex: 0 0 91%;  
+    height: 30px;
+    padding: 15px;
+}
+.k-slide1-header-right{
+    flex: 0 0 9%;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.k-slide1-main{
+    margin-top: 10px;
+    display: flex;
+}
+.k-slide1-main-movie{
+    flex: 0 0 33%;
+    height: 600px;
+}
+.k-slide1-main-movie-top{
+    padding: 5px;
+    text-align: center;
+}
+.k-slide1-main-movie-middle{
+    display: flex;
+}
+
+.k-main-movie-scrollbox{
+    flex: 0 0 30%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.k-select{
+    min-width: 100px;
+    border-radius: 10px;
+}
+.k-main-movie-iconbox{
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+.k-main-movie-iconbox div{
+    padding-right: 10px;
+}
+
+.k-main-movie-bottom{
+    height: 530px;
+    margin-top: 10px;
+    overflow: scroll;
+}
+.k-main-movie-bottom::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+.k-main-movie-bottom::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+.k-bar{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.k-bar:hover{
+    border: 2px solid #00c9c7;
+    border-radius: 15px;
+}
+.k-age{
+    flex: 0 0 15%;
+    border-radius: 50%;
+    padding: 5px;
+}
+.k-title{
+    flex: 0 0 85%;
+    padding: 0 5px;
+    font-size: 12px;
+}
+.k-slide1-main-calendar{
+    flex: 0 0 10%;
+    height: 600px;
+}
+.k-slide1-main-calendar-top{
+    padding: 5px;
+    text-align: center;
+}
+.k-slide1-main-calendar-middle-bottom{
+    height: 500px;
+    text-align: center;
+    overflow: scroll;
+    margin-top: 10px;
+}
+.k-slide1-main-calendar-middle-bottom::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+.k-slide1-main-calendar-middle-bottom::-webkit-scrollbar-thumb {
+    background-color: white;
+}
+.k-slide1-main-calendar-middle-bottom div{
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+}
+.k-slide1-main-calendar-middle-bottom div:hover{
+    border: 2px solid #00c9c7;
+}
+.k-slide1-main-result{
+    flex: 0 0 57%;
+    height: 600px;
+    margin-left: 30px;
+}
+.k-slide1-main-result-top{
+    padding: 5px;
+    text-align: center;
+}
+.k-slide1-main-result-middle{
+    margin: 0px 10px 0px 10px;
+    height: 300px;
+    display: flex;
+}
+.k-slide1-main-result-middle-poster{
+    flex: 0 0 32%;
+    border: 2px solid white;
+}
+.k-slide1-main-result-middle-info{
+    flex: 0 0 68%;
+    padding: 15px;
+}
+.k-slide1-main-result-middle-info div{
+    padding: 10px;
+}
+.k-slide1-main-result-bottom-info-top{
+    display: flex;
+}
+.k-slide1-main-result-bottom-info-top span{
+    padding-right: 10px;
+}
+.k-slide1-main-result-bottom{
+    height: 250px;
+    margin: 0px 10px 0px 10px;
+}
+.k-slide1-main-result-bottom-date{
+    padding: 10px;
+    font-size: 18px;
+}
+.k-slide1-main-result-bottom-demension{
+    height: 50px;
+    padding: 15px;
+}
+.k-slide1-main-result-bottom-clock{
+    display: flex;
+    height: 170px;
+    padding-left: 15px;
+
+}
+.k-slide1-clock-box{
+    width: 120px;
+    height: 120px;
+    border: 1px solid white;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.k-slide1-clock-box-top{
+    display: flex;
+    justify-content: flex-end;
+}
+.k-slide1-clock-box-middle{
+    text-align: center;
+    font-size: 25px;
+}
+.k-slide1-clock-box-bottom{
+    font-size: 15px;
+    text-align: center;
+}
+.k-slide1-clock-box-bottom2{
+    margin-top: 3px;
+    text-align: center;
+    font-size: 13px;
+}
+@keyframes k-example{
+    0% {transform: translateY(-800px)}
+    100% {transform: translateY(0px);}
+}

@@ -1,0 +1,8 @@
+.k-header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.k-header-title{
+    border-bottom: 6px double #00c8c8;
+    margin-bottom: 50px;
+}
