@@ -7,20 +7,22 @@
 
 .k-slide1-container{
     width: 100%;
-    height: 800px;
+    height: 750px;
     position: fixed;
     z-index: 20;
     color: white;
     right: 0px;
-    top: 20px;
+    top: 70px;
     animation: k-example;
     animation-duration: 1s;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
 }
 .k-slide1-box{
     width: 1200px;
     height: 650px;
     margin: auto;
-    margin-top: 70px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
 }
 .k-slide1-header{
@@ -192,6 +194,9 @@
     margin-right: 15px;
     padding: 5px;
     border-radius: 15px;
+}
+.k-slide1-clock-box:hover{
+    border: 2px solid #00c9c7;
 }
 .k-slide1-clock-box-top{
     display: flex;

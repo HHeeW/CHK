@@ -17,6 +17,7 @@ const main = () => {
         </div>
         <div className='k-main-bottom-right'><img src='/K_images/뺑반2.jpg' width='250'></img></div>
       </div>
+      <div className='k-main-bottom2'></div>
     </div>
   )
 }

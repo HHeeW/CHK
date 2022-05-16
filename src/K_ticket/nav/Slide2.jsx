@@ -3,21 +3,16 @@ import './slide2.css';
 
 const Slide2 = (props) => { // props 안에 객체로 다들어있음
     const List = () => {
-        const arr2 = [];
-        let count = 0;
-        let count2 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-        let count3 = 0;
+        const arr2 = [];    
         for(let i=0; i<40; i++){
-            count++;
-            if(count === 9){ count = 1; count3++; }
-            arr2.push(<div id={count} row={count2[count3]}><i className="fa-solid fa-couch k-sofa"></i></div>)
+            arr2.push(<div id={i+1} onClick={chair}><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i]}}></i></div>)
         }
         return arr2;
     }
     const List2 = () => {
         const arr2 = [];
-        for(let i=0; i<16; i++){
-            arr2.push(<div><i className="fa-solid fa-couch k-sofa"></i></div>)
+        for(let i=41; i<65; i++){
+            arr2.push(<div id={i} onClick={chair} ><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i-1]}}></i></div>)
         }
         return arr2;
     }
@@ -46,28 +41,61 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
     }
     return arr2;
     }
+   
+    const chair = (e) => {
+        console.log('chair');
+        console.log(e.currentTarget.id);
+
+        if(chair_count !== 0){ 
+            let arr = [...chair_color];
+            console.log(chair_color);   
+            arr[e.currentTarget.id-1] = 'red';
+            setChair_color(arr);
+            setChair_count(chair_count - 1);
+        }
+    }
+    const chair_reset = () => { // 의자 초기화
+        console.log('reset');
+        let arr = [];
+        setChair_color(arr);
+        setChair_count(0);
+        setCount1(0);
+        setCount2(0);
+        setCount3(0);
+        setCalulator(0);
+    }
     const up = (e) => {
         console.log('up');
+        setChair_count(chair_count + 1);
+        console.log(`chair_count : ${chair_count}`);
+       
         switch(true){
-            case e.target.id === '1': setCount1(count1 + 1); break;
-            case e.target.id === '2': setCount2(count2 + 1); break;
-            case e.target.id === '3': setCount3(count3 + 1); break;
+            case e.target.id === '1': setCalulator(calculator + 11000); setCount1(count1 + 1); break;
+            case e.target.id === '2': setCalulator(calculator + 8000); setCount2(count2 + 1); break;
+            case e.target.id === '3': setCalulator(calculator + 13000); setCount3(count3 + 1); break;
         }
+       
         
     }
     const down = (e) => {
-
         console.log('down');
+        let arr = [...chair_color];
+        arr[chair_color.findIndex(x => x === 'red')] = '';
+        setChair_color(arr);
         switch(true){
-            case e.target.id === '1': if(count1 === 0){ break; } setCount1(count1 - 1); break;
-            case e.target.id === '2': if(count2 === 0){ break; } setCount2(count2 - 1); break;
-            case e.target.id === '3': if(count3 === 0){ break; } setCount3(count3 - 1); break;
+            case e.target.id === '1': if(count1 === 0){ break; } setCalulator(calculator - 11000); setCount1(count1 - 1); break;
+            case e.target.id === '2': if(count2 === 0){ break; } setCalulator(calculator - 8000); setCount2(count2 - 1); break;
+            case e.target.id === '3': if(count3 === 0){ break; } setCalulator(calculator - 13000); setCount3(count3 - 1); break;
         }
-
+        console.log(chair_count);
     }
-    let [count1, setCount1] = useState(1);
+    let [count1, setCount1] = useState(0);
     let [count2, setCount2] = useState(0);
     let [count3, setCount3] = useState(0);
+    let [chair_color, setChair_color] = useState([]); // 의자 색상 변경
+    let [chair_count, setChair_count] = useState(0); // 의자 색상 갯수
+    let [calculator, setCalulator] = useState(0); // 금액
+    let [chair_number, setChair_number] = useState();
     
   return (
     <div className='k-slide2-container' style={{display : props.slide2display ? 'none' : 'block'}}>
@@ -87,12 +115,20 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
                                 <div className='k-slide2-main-left-button3'>VIP</div>
                             </div>
                             <div className='k-slide2-main-left-button_box-right'>
-                                <div><i id='1' onClick={up} className="fa-solid fa-angle-up"></i>&nbsp;&nbsp;{count1}&nbsp;&nbsp;<i id='1' onClick={down} class="fa-solid fa-chevron-down"></i></div>
-                                <div><i id='2' onClick={up} className="fa-solid fa-angle-up"></i>&nbsp;&nbsp;{count2}&nbsp;&nbsp;<i id='2' onClick={down} class="fa-solid fa-chevron-down"></i></div>
-                                <div><i id='3' onClick={up} className="fa-solid fa-angle-up"></i>&nbsp;&nbsp;{count3}&nbsp;&nbsp;<i id='3' onClick={down} class="fa-solid fa-chevron-down"></i></div>
-
+                                <div><i id='1' onClick={up} className="fa-solid fa-angle-up k-cursor"></i>&nbsp;&nbsp;{count1}&nbsp;&nbsp;<i id='1' onClick={down} class="fa-solid fa-chevron-down"></i></div>
+                                <div><i id='2' onClick={up} className="fa-solid fa-angle-up k-cursor"></i>&nbsp;&nbsp;{count2}&nbsp;&nbsp;<i id='2' onClick={down} class="fa-solid fa-chevron-down"></i></div>
+                                <div><i id='3' onClick={up} className="fa-solid fa-angle-up k-cursor"></i>&nbsp;&nbsp;{count3}&nbsp;&nbsp;<i id='3' onClick={down} class="fa-solid fa-chevron-down"></i></div>
                             </div>
                         </div>
+                        <div className='k-slide2-main-left-button_box2'>
+                            <div><button className='k-cursor'>관린 할인 안내</button></div>
+                            <div><button className='k-cursor' onClick={chair_reset}>인원수 초기화</button></div>
+                        </div>
+                        <div>좌석</div>
+                   </div>
+                   <div className='k-slide2-main-left-result'>
+                        <div className='k-slide2-main-left-result-money'>금액 : {calculator}원</div>
+                        <div className='k-slide2-main-left-result-calcurator k-cursor'>결제하기 <i class="fa-solid fa-circle-arrow-right"></i></div>
                    </div>
                 </div>
                 <div className='k-slide2-main-right'>

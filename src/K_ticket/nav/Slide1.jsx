@@ -56,7 +56,7 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
     const List3 = (props) => {
         const arr2 = [];
         for(let i of props.arr){
-            arr2.push(<div id={i.id} onClick={slide2_display} className='k-slide1-clock-box'>
+            arr2.push(<div id={i.id} onClick={slide2_display} className='k-slide1-clock-box k-cursor'>
             <div className='k-slide1-clock-box-top'><i class="fa-solid fa-sun k-sun"></i><i class="fa-solid fa-moon k-moon"></i></div>
             <div className='k-slide1-clock-box-middle'>{i.clock}</div>
             <div className='k-slide1-clock-box-bottom'>{i.clock2}</div>
@@ -141,6 +141,7 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
   return (
     <div className='k-slide1-container' style={{display: slidedisplay ? 'none' : 'block'}}>
         <Slide2 slide2display={slide2display} setSlide2display={setSlide2display} movie={movie} setMovie={setMovie} arr={arr} clock={clock} week={week} clock_arr={clock_arr} clock_props={clock_props} />
+        <div>dd</div>
         <div className='k-slide1-box'>
         <div className='k-slide1-header'>
             <div className='k-slide1-header-left'>예매하기</div>
