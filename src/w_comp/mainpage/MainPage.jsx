@@ -26,10 +26,10 @@ const MainPage = () => {
             <div className="w_b-footer">
                 
                     <ul>
-                        <li><Link to="/snack"><i class="fa-regular fa-ice-cream"></i><p>스낵</p></Link></li>
-                        <li><Link to="/giftshop"><i class="fa-regular fa-square-check"></i><p>굿즈</p></Link></li>
-                        <li><Link to="/membership"><i class="fa-regular fa-user"></i><p>멤버십 혜택</p></Link></li>
-                        <li><i class="fa-regular fa-clapperboard"></i><p>My상영관</p></li>
+                        <li><Link to="/snack"><i class="fa-regular fa-ice-cream w_icon"></i><p>스낵</p></Link></li>
+                        <li><Link to="/giftshop"><i class="fa-regular fa-square-check w_icon"></i><p>굿즈</p></Link></li>
+                        <li><Link to="/membership"><i class="fa-regular fa-user w_icon"></i><p>멤버십 혜택</p></Link></li>
+                        <li><Link to="/login"><i class="fa-regular fa-clapperboard w_icon "></i><p>My상영관</p></Link></li>
                     </ul>
             </div>
             
