@@ -1,7 +1,8 @@
 import styled from 'styled-components'
-import { Login, PersonAdd } from '@styled-icons/material'
+import { Login, PersonAdd, Logout } from '@styled-icons/material'
 import { Link } from 'react-router-dom';
 import Movie_Search from'./Movie_Search';
+import { useState } from 'react';
 // CSS
 const Header = styled.div`
   height: 90px;
@@ -70,6 +71,7 @@ const Flex_SB = styled.div`
 `
 
 function Topnav() {
+  const [login, setLogin] = useState(true);
   return (
     <Header>
       <FixBox>
@@ -91,17 +93,28 @@ function Topnav() {
           </MenuBox>
           <Member>
             <Flex_SB>
-              <LoginBox><Link to="login">
-                <Login size={30} />
-                로그인
-                </Link>
-              </LoginBox>
-              <SignUpBox>
-                <Link to="/join" > 
-                  <PersonAdd size={30} />
-                  회원가입
-                </Link>
-              </SignUpBox>
+              { login ? 
+              <>
+                <LoginBox>
+                  <Logout size={30} />
+                    로그아웃
+                </LoginBox>
+              </>
+              :
+              <>
+                <LoginBox><Link to="login">
+                  <Login size={30} />
+                  로그인
+                  </Link>
+                </LoginBox>
+                <SignUpBox>
+                  <Link to="/join" > 
+                    <PersonAdd size={30} />
+                    회원가입
+                  </Link>
+                </SignUpBox>
+              </>}
+              
             </Flex_SB>
             <Flex_SB>
               <Movie_Search />
