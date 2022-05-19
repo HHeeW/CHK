@@ -3,6 +3,9 @@ import './slide1.css';
 import Slide2 from './Slide2';
 
 const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
+    const sort1 = [...arr];
+    sort1.sort((a, b) => b.score - a.score);
+
 
     const calandar_arr = [  {id: 1, date: '15', week: '일'},
                             {id: 2, date: '16', week: '월'},
@@ -33,13 +36,12 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         let count = -1;
         for(let i of props.arr){
             count++;
-            arr2.push(<div key={i.id} id={i.id} style={{border: poster[count], borderRadius : '15px'}} onClick={movie_select} className='k-bar'>
+            arr2.push(<div key={i.id} id={i.id} style={{border: poster[i.id-1], borderRadius : '15px'}} onClick={movie_select} className='k-bar'>
                         <div className='k-age'><img src={i.img}></img></div>
                         <div className='k-title'>{i.title}</div>
                     </div>);
-            
         }
-        return(arr2);
+        return arr2;
     }
     
     const List2 = (props) => {
@@ -97,8 +99,9 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         setSlidedisplay(!slidedisplay);
     }
     const movie_select = (e) => { // 영화 선택 시 border
+        console.log(e.currentTarget.id);
         poster = [];
-        let arr= [...poster];
+        let arr= [];
         arr[e.currentTarget.id-1] = '2px solid #00c9c7';
         setPoster(arr);
         setMovie(e.currentTarget.id);
@@ -119,7 +122,9 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         setSlide2display(!slide2display);
     }
     
+    
     let [poster, setPoster] = useState([]); // movie border
+    let [poster2, setPoster2] = useState([]); // movie 평점 border
 
     useEffect(()=>{ // image 클릭시에만 movie_select border 활성화
         let poster = [];
@@ -127,8 +132,19 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         arr[movie_number-1] = '2px solid #00c9c7';
         setPoster(arr);
         setMovie(movie_number);
-        
     },[movie_number]);
+
+    const sort_score = (e) => {
+        if(e.target.value !== '1'){setSort('score')}else{setSort('a');}
+    }
+    const sort_bar = () => {
+        console.log('sort_bar');
+
+    }
+    const sort_grid = () => {
+        console.log('sort_gird');
+
+    }
     
     let [calendar, setCalendar] = useState(['2px solid #00c9c7']); // 날짜 선택시 border
     let [clock, setClock] = useState('15'); // 날짜
@@ -136,6 +152,10 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
     let [movie, setMovie] = useState(); // movie poster
     let [slide2display, setSlide2display] = useState('false'); // Slide2 display
     let [clock_props, setClock_props] = useState(1);
+    let [sort, setSort] = useState('a');
+
+    let content = null;
+    if(sort !== 'score') {content = <List arr={arr} />}else{content = <List arr={sort1} />}
 
     
   return (
@@ -152,20 +172,20 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
                 <div className='k-slide1-main-movie-top'>영화</div>
                 <div className='k-slide1-main-movie-middle'>
                 <div className="k-main-movie-scrollbox">
-                    <select className='k-select'>
+                    <select className='k-select' onChange={sort_score}>
                         <option value="1">예매순</option>
                         <option value="2">평점순</option>
                     </select>
                 </div>
                 <div className='k-main-movie-iconbox'>
                    
-                <div><i className="fa-solid fa-bars"></i></div>
-                <div><i className="fa-solid fa-border-all"></i></div>
+                <div><i className="fa-solid fa-bars" onClick={sort_bar}></i></div>
+                <div><i className="fa-solid fa-border-all" onClick={sort_grid}></i></div>
             
                 </div>
                 </div>
                 <div className='k-main-movie-bottom'>
-                    <List arr={arr} />
+                    {content}
                 </div>
             </div>
            
