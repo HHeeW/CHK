@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './slide2.css';
 
 const Slide2 = (props) => { // props 안에 객체로 다들어있음
+    const chair_row = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+
     const List = () => {
-        const arr2 = [];    
-        for(let i=0; i<40; i++){
-            arr2.push(<div id={i+1} onClick={chair}><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i]}}></i></div>)
+        const arr2 = [];
+        for(let i=0; i<40;i++){
+            arr2.push(<div id={i+1} onClick={()=>chair(i+1, chair_row[Math.floor(i/8)])}><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i]}}></i></div>)
         }
         return arr2;
     }
     const List2 = () => {
         const arr2 = [];
         for(let i=41; i<65; i++){
-            arr2.push(<div id={i} onClick={chair} ><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i-1]}}></i></div>)
+            arr2.push(<div id={i} onClick={()=>chair(i+1)} ><i className="fa-solid fa-couch k-sofa k-cursor" style={{color: chair_color[i-1]}}></i></div>)
         }
         return arr2;
     }
@@ -36,24 +38,25 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
                 <div>지역 : 김포시</div>
             </div>
         </div>)
-
         }
     }
     return arr2;
     }
    
-    const chair = (e) => {
-        console.log('chair');
-        console.log(e.currentTarget.id);
+    const chair = (t, r) => {
+       
+        if(chair_count !== 0){
+            let arr2 = [...chair_number];
+            arr2[t-1] = r+t+' ';
+            setChair_number(arr2);
 
-        if(chair_count !== 0){ 
             let arr = [...chair_color];
-            console.log(chair_color);   
-            arr[e.currentTarget.id-1] = 'red';
+            arr[t-1] = 'red';
             setChair_color(arr);
             setChair_count(chair_count - 1);
         }
     }
+
     const chair_reset = () => { // 의자 초기화
         console.log('reset');
         let arr = [];
@@ -63,40 +66,59 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
         setCount2(0);
         setCount3(0);
         setCalulator(0);
+        setChair_number(arr);
     }
     const up = (e) => {
         console.log('up');
         setChair_count(chair_count + 1);
-        console.log(`chair_count : ${chair_count}`);
        
         switch(true){
             case e.target.id === '1': setCalulator(calculator + 11000); setCount1(count1 + 1); break;
             case e.target.id === '2': setCalulator(calculator + 8000); setCount2(count2 + 1); break;
             case e.target.id === '3': setCalulator(calculator + 13000); setCount3(count3 + 1); break;
         }
-       
-        
+        console.log(`up : ${calculator}`);
     }
     const down = (e) => {
         console.log('down');
         let arr = [...chair_color];
+        let arr2 = [...chair_number];
+       
+        arr2[chair_number.findIndex(x => x !== '' && x !== undefined)] = '';
+        setChair_number(arr2);
         arr[chair_color.findIndex(x => x === 'red')] = '';
         setChair_color(arr);
+        
         switch(true){
             case e.target.id === '1': if(count1 === 0){ break; } setCalulator(calculator - 11000); setCount1(count1 - 1); break;
             case e.target.id === '2': if(count2 === 0){ break; } setCalulator(calculator - 8000); setCount2(count2 - 1); break;
             case e.target.id === '3': if(count3 === 0){ break; } setCalulator(calculator - 13000); setCount3(count3 - 1); break;
         }
-        console.log(chair_count);
     }
+    
+
+    // const calculator_com = () => { // 금액 세번째자리마다 콤마찍기 함수
+    //     console.log('점 찍어줍시다.');
+    //     console.log(`지역 : ${calculator}`);
+    //     const a = String(calculator).split('').reverse();
+    //     console.log(a);
+    //     a.map((x, index)=>{
+    //         if((index+1)%3 === 0){ return a.splice((index+1), 1, x+',')}
+    //     });
+
+    //     const result = a.reverse().join('');
+    //     console.log(result);
+    //     setCalulator(result);
+    // }
+    
     let [count1, setCount1] = useState(0);
     let [count2, setCount2] = useState(0);
     let [count3, setCount3] = useState(0);
     let [chair_color, setChair_color] = useState([]); // 의자 색상 변경
     let [chair_count, setChair_count] = useState(0); // 의자 색상 갯수
     let [calculator, setCalulator] = useState(0); // 금액
-    let [chair_number, setChair_number] = useState();
-    
+    let [chair_number, setChair_number] = useState([]); // 좌석 ex) A1 B4...
+
   return (
     <div className='k-slide2-container' style={{display : props.slide2display ? 'none' : 'block'}}>
         <div className='k-slide2-box'>
@@ -124,7 +146,7 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
                             <div><button className='k-cursor'>관린 할인 안내</button></div>
                             <div><button className='k-cursor' onClick={chair_reset}>인원수 초기화</button></div>
                         </div>
-                        <div>좌석</div>
+                        <div>좌석: {chair_number}</div>
                    </div>
                    <div className='k-slide2-main-left-result'>
                         <div className='k-slide2-main-left-result-money'>금액 : {calculator}원</div>

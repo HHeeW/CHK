@@ -93,7 +93,18 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         </>)
             }
         }
-        return(arr2);
+        return arr2;
+    }
+    const List6 = (props) => {
+        const arr2= [];
+        for(let i of props.arr){
+            arr2.push(<div className='k-grid' key={i.id} id={i.id} style={{border: poster[i.id-1], borderRadius : '15px'}} onClick={movie_select}>
+            <div className='k-grid-poster'><img src={i.poster} width='100'></img></div>
+            <div className='k-grid-title'>{i.title}</div>
+        </div>)
+
+        }
+        return arr2;
     }
     const slidedisplayback = () => { // 이전으로
         setSlidedisplay(!slidedisplay);
@@ -124,7 +135,6 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
     
     
     let [poster, setPoster] = useState([]); // movie border
-    let [poster2, setPoster2] = useState([]); // movie 평점 border
 
     useEffect(()=>{ // image 클릭시에만 movie_select border 활성화
         let poster = [];
@@ -135,14 +145,18 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
     },[movie_number]);
 
     const sort_score = (e) => {
-        if(e.target.value !== '1'){setSort('score')}else{setSort('a');}
+        if(e.target.value !== '1'){setSort('score')}else{setSort('');}
     }
     const sort_bar = () => {
-        console.log('sort_bar');
+        let arr = ['#00c9c7', 'white'];
+        setGrid_icon_border([...arr]);
+        setGrid('bar');
 
     }
     const sort_grid = () => {
-        console.log('sort_gird');
+        let arr = ['white', '#00c9c7'];
+        setGrid_icon_border([...arr]);
+        setGrid('grid');
 
     }
     
@@ -152,11 +166,18 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
     let [movie, setMovie] = useState(); // movie poster
     let [slide2display, setSlide2display] = useState('false'); // Slide2 display
     let [clock_props, setClock_props] = useState(1);
-    let [sort, setSort] = useState('a');
+    let [sort, setSort] = useState(''); // 예매순 - 평점순
+    let [grid, setGrid] = useState('bar'); // bar - grid
+    let [grid_icon_border, setGrid_icon_border] = useState(['#00c9c7', '']); // grid icon border
 
     let content = null;
-    if(sort !== 'score') {content = <List arr={arr} />}else{content = <List arr={sort1} />}
-
+    switch(true){
+        case sort === '' && grid === 'bar' : content = <List arr={arr} />; break;
+        case sort === 'score' && grid === 'bar' : content = <List arr={sort1} />; break;
+        case sort === '' && grid === 'grid' : content = <List6 arr={arr} />; break;
+        case sort === 'score' &&  grid === 'grid' : content = <List6 arr={sort1} />; break;
+    }
+    
     
   return (
     <div className='k-slide1-container' style={{display: slidedisplay ? 'none' : 'block'}}>
@@ -179,8 +200,8 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
                 </div>
                 <div className='k-main-movie-iconbox'>
                    
-                <div><i className="fa-solid fa-bars" onClick={sort_bar}></i></div>
-                <div><i className="fa-solid fa-border-all" onClick={sort_grid}></i></div>
+                <div><i className="fa-solid fa-bars k-cursor" style={{color : grid_icon_border[0]}} onClick={sort_bar}></i></div>
+                <div><i className="fa-solid fa-border-all k-cursor" style={{color : grid_icon_border[1]}} onClick={sort_grid}></i></div>
             
                 </div>
                 </div>

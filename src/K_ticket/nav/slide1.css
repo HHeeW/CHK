@@ -4,6 +4,9 @@
 .k-moon{
     color: darkblue;
 }
+.k-cursor{
+    cursor: pointer;
+}
 
 .k-slide1-container{
     width: 100%;
@@ -95,7 +98,6 @@
 }
 .k-bar:hover{
     border: 2px solid #00c9c7;
-    border-radius: 15px;
 }
 .k-age{
     flex: 0 0 15%;
@@ -106,6 +108,23 @@
     flex: 0 0 85%;
     padding: 0 5px;
     font-size: 12px;
+}
+.k-grid{
+    display: flex;
+    height: 140px;
+    cursor: pointer;
+    margin: 5px;
+}
+.k-grid:hover{
+    border: 2px solid #00c9c7;
+}
+.k-grid-poster{
+    flex: 0 0 20%;
+}
+.k-grid-title{
+    flex: 0 0 80%;
+    line-height: 100px;
+    text-align: center;
 }
 .k-slide1-main-calendar{
     flex: 0 0 10%;
