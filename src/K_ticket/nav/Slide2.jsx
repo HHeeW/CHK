@@ -73,11 +73,10 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
         setChair_count(chair_count + 1);
        
         switch(true){
-            case e.target.id === '1': setCalulator(calculator + 11000); setCount1(count1 + 1); break;
-            case e.target.id === '2': setCalulator(calculator + 8000); setCount2(count2 + 1); break;
-            case e.target.id === '3': setCalulator(calculator + 13000); setCount3(count3 + 1); break;
+            case e.target.id === '1': setCalulator(parseInt(calculator) + 11000); setCount1(count1 + 1); break;
+            case e.target.id === '2': setCalulator(parseInt(calculator) + 8000); setCount2(count2 + 1); break;
+            case e.target.id === '3': setCalulator(parseInt(calculator) + 13000); setCount3(count3 + 1); break;
         }
-        console.log(`up : ${calculator}`);
     }
     const down = (e) => {
         console.log('down');
@@ -96,28 +95,21 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
         }
     }
     
-
-    // const calculator_com = () => { // 금액 세번째자리마다 콤마찍기 함수
-    //     console.log('점 찍어줍시다.');
-    //     console.log(`지역 : ${calculator}`);
-    //     const a = String(calculator).split('').reverse();
-    //     console.log(a);
-    //     a.map((x, index)=>{
-    //         if((index+1)%3 === 0){ return a.splice((index+1), 1, x+',')}
-    //     });
-
-    //     const result = a.reverse().join('');
-    //     console.log(result);
-    //     setCalulator(result);
-    // }
-    
     let [count1, setCount1] = useState(0);
     let [count2, setCount2] = useState(0);
     let [count3, setCount3] = useState(0);
     let [chair_color, setChair_color] = useState([]); // 의자 색상 변경
     let [chair_count, setChair_count] = useState(0); // 의자 색상 갯수
     let [calculator, setCalulator] = useState(0); // 금액
+    let [calculator2, setCalulator2] = useState(0); // , 찍은 금액
     let [chair_number, setChair_number] = useState([]); // 좌석 ex) A1 B4...
+
+    useEffect(()=>{ // 금엑에 콤마찍기
+        let a = String(calculator).split('').reverse();
+        a.map((x, index)=>{if((index+1)%3 === 0 && index+1 < a.length){return a.splice((index), 1, ','+x)}});
+        a = a.reverse().join('');
+        setCalulator2(a);
+    },[chair_count])
 
   return (
     <div className='k-slide2-container' style={{display : props.slide2display ? 'none' : 'block'}}>
@@ -149,7 +141,7 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
                         <div>좌석: {chair_number}</div>
                    </div>
                    <div className='k-slide2-main-left-result'>
-                        <div className='k-slide2-main-left-result-money'>금액 : {calculator}원</div>
+                        <div className='k-slide2-main-left-result-money'>금액 : {calculator2}원</div>
                         <div className='k-slide2-main-left-result-calcurator k-cursor'>결제하기 <i class="fa-solid fa-circle-arrow-right"></i></div>
                    </div>
                 </div>

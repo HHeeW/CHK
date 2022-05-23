@@ -13,10 +13,7 @@ export default function Header() {
         <div>예매</div>
         <div>스토어</div>
         <div>이벤트</div>
-
       </div>
-        
-
     </div>
   )
 }
