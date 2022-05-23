@@ -43,7 +43,7 @@ const Movie_Page = (props) => {
                     <p>장르 : {props.gen} / 기본 : <span className={props.age}></span> {props.bas}</p>
                     <p>개봉 : {props.open}</p>
                     <div className="H_ticketing_box">
-                    <Link to={{pathname:'/ticket', hash: props.entitle}}><button className="H_ticketing">예매</button></Link>
+                    <Link to={'/ticket'} state={props.id}><button className="H_ticketing">예매</button></Link>
                     </div>
                 </div>
             </div>

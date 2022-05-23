@@ -9,7 +9,6 @@ function App() {
         <Route path='/ticket' element ={<Page />} />
     </Routes>
     </>
-
   );
 }
 

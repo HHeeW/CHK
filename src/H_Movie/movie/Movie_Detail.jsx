@@ -28,7 +28,7 @@ const detail = (props) => {
           <p>개봉일 {props.open}</p>
         </div>
         <div className="H_ticketing_box">
-          <Link to={'/ticket'} state={props.title}><button className="H_ticketing">예매</button></Link>
+          <Link to={'/ticket'} state={props.id}><button className="H_ticketing">예매</button></Link>
         </div>
       </div>
     </li>

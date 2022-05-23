@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './main.css'
 
 const main = () => {
-  const aa = 'true';
   return (
     <div className='k-main-container'>
       <div className='k-main-top'></div>
