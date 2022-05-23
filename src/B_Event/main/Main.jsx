@@ -48,7 +48,7 @@ export default function Main() {
           </div>
           <div className='b_faq'>
             <p className='b_Qna'>고객센터</p> 
-            <p>1544-0303</p>
+            <p>1544-1234</p>
             <p>고객센터 운영시간 (평일 : 09:00 ~ 18:00)</p> 
             <span>1:1문의</span><span>대관 문의</span><span>분실물 문의</span>
             </div>

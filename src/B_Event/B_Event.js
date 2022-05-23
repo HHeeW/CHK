@@ -8,12 +8,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Main from '../B_Event/main/Main';
+import Logout from './page/Logout';
+
 
 function App() {
   return (
     <>
-    {/* <Main/> */}
+  <Logout/>
     
         <Routes>
             <Route path="/preview" element={<Preview/>}/>
