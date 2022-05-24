@@ -8,14 +8,13 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Logout from './page/Logout';
+
 
 
 function App() {
   return (
     <>
-  <Logout/>
-    
+ 
         <Routes>
             <Route path="/preview" element={<Preview/>}/>
             <Route path="/reserve" element={<Reserve/>} />
