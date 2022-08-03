@@ -61,8 +61,28 @@ const Movie_Page = (props) => {
                     </li>
                     <li><button onClick={Sview} className={`${sview === true ? 'active' : ''}`}>관람평</button>
                         <ul className="H_nav_lnb">
-                        {(sview?
-                                <li> 관람평 적는 공간 만들기 </li>
+                            {(sview?
+                                <>
+                                    <h1 className='H_review_total'>8 / 10 평균 평점</h1>
+                                    <li className='H_review'>
+                                        <div className='H_review_point'> 10 / 10 </div>
+                                         <p className='H_review_text'>관람평 적기</p>
+                                    </li>
+                                    <p className='H_bar'/>
+                                    <li className='H_review'>
+                                        <div className='H_review_point'> 9 / 10 </div>
+                                         <p className='H_review_text'>너무 재미있어요!!</p>
+                                    </li><li className='H_review'>
+                                        <div className='H_review_point'> 8 / 10 </div>
+                                         <p className='H_review_text'>또 보러 가고싶은 영화 1위</p>
+                                    </li><li className='H_review'>
+                                        <div className='H_review_point'> 7/ 10 </div>
+                                         <p className='H_review_text'>배우들이... 너무 멋있다</p>
+                                    </li><li className='H_review'>
+                                        <div className='H_review_point'> 8 / 10 </div>
+                                         <p className='H_review_text'>친구들과 재미있게 봤어요~</p>
+                                    </li>
+                                </>
                                 :
                                 <></>
                             )}

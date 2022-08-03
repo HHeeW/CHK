@@ -4,6 +4,8 @@
     margin-bottom: 45px;
     background-color:none;
     display: flex;
+    position: relative;
+    z-index: -100;
 }
 .w_footer-con{
     width: 1200px;
