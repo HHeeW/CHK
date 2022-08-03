@@ -3,6 +3,8 @@ import './slide1.css';
 import Slide2 from './Slide2';
 
 const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
+
+    console.log('arr: ', arr);
     const sort1 = [...arr];
     sort1.sort((a, b) => b.score - a.score);
 
@@ -54,7 +56,7 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         }
         return(arr2);
 
-    }
+    } 
     const List3 = (props) => {
         const arr2 = [];
         for(let i of props.arr){
@@ -177,7 +179,6 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         case sort === '' && grid === 'grid' : content = <List6 arr={arr} />; break;
         case sort === 'score' &&  grid === 'grid' : content = <List6 arr={sort1} />; break;
     }
-    
     
   return (
     <div className='k-slide1-container' style={{display: slidedisplay ? 'none' : 'block'}}>
