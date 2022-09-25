@@ -94,6 +94,7 @@
     width: 20px;
     height: 20px;
     text-align: center;
+    cursor: pointer;
 }
 .k-slide2-main-left-button_box-right i:hover{
     background-color: red;

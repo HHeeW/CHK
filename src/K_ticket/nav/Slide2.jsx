@@ -44,15 +44,10 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
     }
    
     const chair = (t, r, a) => {
-        console.log('t: ', t);
-        console.log('r: ', r);
-        console.log('a: ', a);
        
         if(chair_count !== 0){
             let arr2 = [...chair_number];
-            console.log('arr2전: ', arr2);
             arr2[t-1] = r+a+' ';
-            console.log('arr2후: ', arr2);
             setChair_number(arr2);
 
             let arr = [...chair_color];
@@ -64,7 +59,6 @@ const Slide2 = (props) => { // props 안에 객체로 다들어있음
 
     
     const chair_reset = () => { // 의자 초기화
-        console.log('reset');
         let arr = [];
         setChair_color(arr);
         setChair_count(0);

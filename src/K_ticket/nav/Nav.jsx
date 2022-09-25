@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext }from 'react'
+import React, { useState, useEffect }from 'react'
 import './nav.css';
 import Slide1 from './Slide1';
-import { ThemeContext } from '../context/ThemeContext';
 import { useLocation } from 'react-router-dom';
 
 // Import Swiper React components
@@ -16,9 +15,7 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 
 const Nav = () => {
-    const data = useContext(ThemeContext);
     const slide1_display_key = useLocation().state; // 타지역에서 예매하기 눌렀을 때 변수에 저장 근데 객체로하면 왜 안될까??
-    console.log(slide1_display_key);
 
     
     const arr = [

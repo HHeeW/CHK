@@ -4,7 +4,6 @@ import Slide2 from './Slide2';
 
 const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
 
-    console.log('arr: ', arr);
     const sort1 = [...arr];
     sort1.sort((a, b) => b.score - a.score);
 
@@ -112,7 +111,6 @@ const Slide1 = ({slidedisplay, setSlidedisplay, arr, movie_number}) => {
         setSlidedisplay(!slidedisplay);
     }
     const movie_select = (e) => { // 영화 선택 시 border
-        console.log(e.currentTarget.id);
         poster = [];
         let arr= [];
         arr[e.currentTarget.id-1] = '2px solid #00c9c7';

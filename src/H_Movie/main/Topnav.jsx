@@ -26,7 +26,7 @@ const TopNav = styled.div`
 `  
 const LogoBox = styled.div`
   width: 20%;
-  height 100%;
+  height: 100%;
 `
 const MenuBox = styled.div`
   height: 100%;
